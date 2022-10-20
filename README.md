@@ -11,22 +11,18 @@
 - Use some form of Error Handling .
 - Organize Your Code into modules & (or packages)
 
-## Example Project :  An online Grocery Store :
+## Project Name :  An app to suggest something to watch (Random!) :
 
-#### Overview : An online store that sells fruits to customers. This online store has 2 main users. The customer and the manager of the store . Each one of them should be able to do the following tasks for the store to function properly . 
+#### Overview: An app suggests something to watch by taking from the user what kind of a series and movies enjoy to watch, and the app will show what the perfect match for their type is since it's hard to decide what you want to watch sometimes. There are two primary users the admin and the end-user. 
 
-#### As a customer I should be able to do the following :
-- Browse  Products . 
-- View the product info (summary, specs, price, quantity , etc.)
-- Search for Products.
-- Get recommendations for my next purchase based on my purchase history.
-- Add Products to the shopping cart .
-- Remove a product from the shopping cart.
-- List the products in my shopping cart. 
-- Continue to checkout . 
-- Fill in my address for delivery.
-- Get receipt of my purchases.
-- Check delivery status . 
+#### As a end-user I should be able to do the following :
+- Browse the Shows. 
+- View the shows info (summary, type, number of episodes , language , rating.)
+- Search for shows.
+- Get recommendations based on thier types of shows .
+- Add shows to thier fav list .
+- list thier fav shows list. 
+- Continue to checkout .  
 
 
 
