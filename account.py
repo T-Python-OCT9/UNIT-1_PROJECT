@@ -1,54 +1,67 @@
 class Account:
 
-    def __init__(self,user_name: str,password: str,phone_number: str ,balance: int):
-        self.__user_name = user_name
-        self.__password = password
-        self.__phone_number = phone_number
-        self.__balance = 0
+    def __init__(self):
+        self.__name = None
+        self.__password = None
+        self.__id = None
+        self.__balance = None
 
     # user_name getter and setter
-    def set_user_name(self,user_name: str):
+    def set_name(self, value: str):
 
-        if not isinstance(user_name, str):
-            raise ValueError('The User Name Should Be String')
+        if  not value.isdigit():
+            self.__name = value
         else:
-            self.__user_name =user_name
+            raise ValueError('The Name Should Be string !!')
     
-    def get_user_name(self):
-        return f'The Name Is: {self.__user_name}'
+    def get_name(self):
+        return f'Your Name Is: {self.__name}'
 
     # password getter and setter
-    def set_password(self,password: str):
+    def set_password(self, value: str):
 
-        if len(password) < 8:
-            print('The Password Should Be More Than 8 Characters')
+        if len(value) > 8:
+            self.__password = value
         else:
-            self.__password =password
+            raise ValueError('The Password Should Be More Than 8 Digits !!')
     
     def get_password(self):
-        return f'The PassWrod Is: {self.__password}'
+        return f'Your Passwrod Is: {self.__password}'
     
     # phone_number getter and setter
-    def set_phone_number(self,phone_number: str):
-        if len(phone_number) < 10:
-            print("The Phone Number Should Be More Than 10 Numbers")
-        self.__phone_number =phone_number
-    
-    def get_phone_number(self):
-        return f'The Phone Number Is: {self.__phone_number}'
+    def set_id(self, value: str):
+
+        if len(value) == 10:
+            self.__id = value
+        else:
+            raise ValueError("The ID Should Be 10 Digits !!")
+
+    def get_id(self):
+        return f'Your ID Is: {self.__id}'
 
     # balance getter and setter    
-    def set_balance(self,balance: int):
-        
-        if not isinstance(blance, int) and balance == 0:
-            raise ValueError('The Balance Should Be Integer And More Than Zero')
+    def set_balance(self, value: int):
+
+        if value.isdigit():
+            self.__balance = value
         else:
-            self.__balance =balance
-    
+            raise ValueError("The Balance Should Be Integer !!")
+            
     def get_balance(self):
-        return f'The Balance Is: {self.__balance}'
+        return f'Your Balance Is: {self.__balance}'
 
 
+# name = input("ENTER YOUR NAME TO CREATE AN ACCOUNT: ")  
+# name = Account() 
+# name.set_user_name('saud')
+# name.set_balance(100)
+# print(name.get_balance())
+# print(name.get_user_name())
+
+
+
+        
+    
 
 
 

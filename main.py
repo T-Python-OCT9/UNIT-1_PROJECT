@@ -1,22 +1,47 @@
 from account import *
-print('---WELCOME TO SAUD BANK---')
 
-while True:
-    operatino = input("TO CREATE ACCOUNT TYPE '1'\nTO SEE YOUR ACCOUNT DATA TYPE '2'\n TO EXIT TYPE '3'\n ENTER THE OPERATION CODE: ")
-    if operatino == '1':
-        name = input("ENTER YOUR NAME TO CREATE AN ACCOUNT: ")
-        password = input("ENTER YOUR PASSWORD: ")
-        phone_number = input("ENTER YOUR PHONE NUMBER: ")
-        balance = input("ENTER YOUR BALANCE: ")
-    elif operatino == '2':
-        pass
-    elif operatino == '3':
-        print("GOOD BEY")
-        break 
-    else:
-        print("THE OPERATION IS NOT VALID !!")   
+print('---WELCOME TO SAUD BANK---')
+def create_account():
+    while True:
+        try:
+            user_name = user_object = input("ENTER YOUR NAME TO CREATE AN ACCOUNT: ")  
+            user_object = Account() 
+            user_object.set_name(user_name)
+            password = input("ENTER YOUR PASSWORD: ")
+            user_object.set_password(password)
+            _id = input("ENTER YOUR ID: ")
+            user_object.set_id(_id)
+            balance = input("ENTER YOUR Balance: ")
+            user_object.set_balance(balance)
+
+        except ValueError as e:
+            print(e)
+            print("---Try Again---")
+            
+        else:
+            print("---Account Created Successfully---")
+            print(Account.get_name(user_object))
+            print(Account.get_password(user_object))
+            print(Account.get_id(user_object))
+            print(Account.get_balance(user_object))
+            break
     
-    name = Account(name, password, phone_number, balance)
+            
+
+        
+
+
+    
+        
+
+    
+
+
+
+
+  
+    
+ 
 
 
 
