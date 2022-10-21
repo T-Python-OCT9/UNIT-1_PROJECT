@@ -2,31 +2,30 @@
 
 ## Based on what you’ve learned until now , create a project of your choosing (impress us with your imagination) . This project must at least satisfy the following minimum requirements :
 
-- Must be interactive on CLI.
-- Use lists or dictionaries or tuples. 
-- Use loops.
-- Use functions that return an output . 
+- [x] Must be interactive on CLI. | input 
+- [x] Use lists or dictionaries or tuples.  | tweets  
+- [x] Use loops. | loop on tweets or liked tweets
+- Use functions that return an output . | check how many likes 
 - Use a Lambda function.
-- Use at least 1 Class.
-- Use some form of Error Handling .
+- [x] Use at least 1 Class. | Twitter class
+- Use some form of Error Handling . | len of tweet should be maximum 100 characters | you can't like or retweet the same tweet twice
 - Organize Your Code into modules & (or packages)
 
-## Example Project :  An online Grocery Store :
+## Example Project :  Twitter :
 
-#### Overview : An online store that sells fruits to customers. This online store has 2 main users. The customer and the manager of the store . Each one of them should be able to do the following tasks for the store to function properly . 
+#### Overview :Social Media app that allows user to communicate and interact with others. 
 
-#### As a customer I should be able to do the following :
-- Browse  Products . 
-- View the product info (summary, specs, price, quantity , etc.)
-- Search for Products.
-- Get recommendations for my next purchase based on my purchase history.
-- Add Products to the shopping cart .
-- Remove a product from the shopping cart.
-- List the products in my shopping cart. 
-- Continue to checkout . 
-- Fill in my address for delivery.
-- Get receipt of my purchases.
-- Check delivery status . 
+#### As a customer I should be able to do the following:
+- [x] View Tweets
+- [x] Add Tweet
+- [x] Like Tweet from Tweets
+- [x] Retweet from  Tweets 
+- [x] List all my liked tweets
+- [x] List all my retweets
+- [x] List all my tweets
+- [x] Un-Like tweet from Likes
+- [x] Un-Retweet from Retweets
+- [x] Count my Tweets / Likes / Retweets
 
 
 
