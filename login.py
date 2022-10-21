@@ -22,4 +22,4 @@ class LoginView(CommandLineView):
                 print(f"\n\t\tLogin\n\n")
             insert_user = input(' Username: ')
             insert_password = getpass(prompt=' Password: ')
-        return super() == 'logged'
+        return 'logged'
