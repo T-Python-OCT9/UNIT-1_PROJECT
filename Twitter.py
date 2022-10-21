@@ -19,31 +19,33 @@ class Twitter:
         #MyTweet List:
         self.MyTweet = []
 
-
     def TimeLine(self):
         for tweet in self.Tweets:
             print(tweet)
 
     def addTweet(self):
         _addTweet = input("Add Your Tweet: ")
-        self.Tweets.append(_addTweet)
-        self.MyTweet.append(_addTweet)
+        if self.Validation(_addTweet):
+            self.Tweets.append(_addTweet)
+            self.MyTweet.append(_addTweet)
 
     def Liked(self):
         for i in range(len(self.Tweets)):
             print(i, self.Tweets[i])
-        indexTweet = input("Which Tweet Would You Like? ")
-        self.Likes.append(self.Tweets[int(indexTweet)])
+        indexTweet = input("\nWhich Tweet Would You Like? ")
+        if self.ValidationLike(self.Tweets[int(indexTweet)]):
+            self.Likes.append(self.Tweets[int(indexTweet)])
 
     def ListLikes(self):
         for tweet in self.Likes:
             print(tweet)
 
-    def Retweet(self):
+    def Retweets(self):
         for i in range(len(self.Tweets)):
             print(i, self.Tweets[i])
-        indexTweet = input("Which Tweet Would You Like to Retweet? ")
-        self.Retweet.append(self.Tweets[int(indexTweet)])
+        indexTweet = input("\nWhich Tweet Would You Like to Retweet? ")
+        if self.ValidationRetweet(self.Tweets[int(indexTweet)]):
+            self.Retweet.append(self.Tweets[int(indexTweet)])
 
     def ListRetweet(self):
         for tweet in self.Retweet:
@@ -56,47 +58,77 @@ class Twitter:
     def UnLikeTweets(self):
         for i in range(len(self.Likes)):
             print(i, self.Likes[i])
-        indexTweet = input("Which Tweet Would You Like to Un-Like? ")
+        indexTweet = input("\nWhich Tweet Would You Like to Un-Like? ")
         self.Likes.pop(int(indexTweet))
 
+    def UnRetweet(self):
+        for i in range(len(self.Retweet)):
+            print(i, self.Retweet[i])
+        indexTweet = input("\nWhich Tweet Would You Like to Un-Retweet? ")
+        self.Retweet.pop(int(indexTweet))
 
-User1 =Twitter("Roaa")
-print("         WELCOME To Twitter      ")
-print("          | Time Line |      ")
-User1.TimeLine()
+    def STATS(self):
+        return len(self.MyTweet) + " Tweets " +  len(self.Likes) + " Liked Tweets " + len(self.Retweet) + " Retweet "
 
-UserOptions = ""
-# User1.addTweet()
-# User1.TimeLine()
+    #Error handler | 
+    def Validation(self, Text : str):
+        if not (isinstance(Text , str) and len(Text) < 300) :
+            raise ValueError("\n Tweet must be string and less than 300 characters \n")
+        else:
+            return True
 
-#Using while looop
-while UserOptions != "q" :
-    print("1- To Add Tweet\n"+
-            "2- To Like Tweet from Tweets\n"+
-            "3- To Retweet from  Tweets\n"
-            "4- To List all my liked tweets\n"
-            "5- To List all my retweets\n"
-            "6- To List all my tweets\n"
-            "7- To Un-Like tweet from Likes\n"
-            "8- To Un-Retweet from Retweets\n"
-            "9- To Count my Tweets / Likes / Retweets\n"
-            "10- To View Time Line Tweets")
-            
-    UserOptions=input("What Would You Like To Do? press the number to choose or 'q' to quit ")  
-    if UserOptions == '1' :
-        User1.addTweet()
-    elif UserOptions == '2' :
-        User1.Liked()
-    elif UserOptions == '3' :
-        User1.Retweet()
-    elif UserOptions == '4' :
-        User1.ListLikes()
-    elif UserOptions == '5' :
-        User1.ListRetweet()
-    elif UserOptions == '6' :
-        User1.MyTweets()
-    elif UserOptions == '7' :
-        User1.UnLikeTweets()
-    elif UserOptions == '10' :
-        User1.TimeLine()
-    
+    def ValidationRetweet(self, Text : str):
+        if Text in self.Retweet :
+            raise ValueError("\n You have already retweeted it \n")
+        else:
+            return True
+
+    def ValidationLike(self, Text : str ):
+        if Text in self.Likes :
+            raise ValueError("\n You have already liked it \n")
+        else:
+            return True
+
+    def StartTwitter(self):
+
+        print("         WELCOME To Twitter      ")
+        print("          ⤹ Time Line ⤵      ")
+        UserOptions = ""
+
+        TimeLineCount =  lambda  : len(self.Tweets)
+        print("     Current Tweets in Time Line ⇨ " , TimeLineCount())
+
+        #Using while looop
+        while UserOptions != "q" :
+            print("     1- To Add Tweet\n"+
+                    "     2- To Like Tweet from Tweets\n"+
+                    "     3- To Retweet from  Tweets\n"
+                    "     4- To List all my liked tweets\n"
+                    "     5- To List all my retweets\n"
+                    "     6- To List all my tweets\n"
+                    "     7- To Un-Like tweet from Likes\n"
+                    "     8- To Un-Retweet from Retweets\n"
+                    "     9- To Count my Tweets / Likes / Retweets\n"
+                    "     10- To View Time Line Tweets \n")
+                    
+            UserOptions=input("What Would You Like To Do? press the number to choose or 'q' to quit ")  
+            if UserOptions == '1' :
+                self.addTweet()
+            elif UserOptions == '2' :
+                self.Liked()
+            elif UserOptions == '3' :
+                self.Retweets()
+            elif UserOptions == '4' :
+                self.ListLikes()
+            elif UserOptions == '5' :
+                self.ListRetweet()
+            elif UserOptions == '6' :
+                self.MyTweets()
+            elif UserOptions == '7' :
+                self.UnLikeTweets()
+            elif UserOptions == '8' :
+                self.UnRetweet()
+            elif UserOptions == '9' :
+                self.STATS()
+            elif UserOptions == '10' :
+                self.TimeLine()

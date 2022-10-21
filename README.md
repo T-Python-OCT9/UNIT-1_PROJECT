@@ -5,11 +5,11 @@
 - [x] Must be interactive on CLI. | input 
 - [x] Use lists or dictionaries or tuples.  | tweets  
 - [x] Use loops. | loop on tweets or liked tweets
-- Use functions that return an output . | check how many likes 
-- Use a Lambda function.
+- [x] Use functions that return an output . | count how many likes | Tweets | Retweets
+- [x] Use a Lambda function.
 - [x] Use at least 1 Class. | Twitter class
-- Use some form of Error Handling . | len of tweet should be maximum 100 characters | you can't like or retweet the same tweet twice
-- Organize Your Code into modules & (or packages)
+- [x] Use some form of Error Handling . | len of tweet should be maximum 300 characters | you can't like or retweet the same tweet twice
+- [x] Organize Your Code into modules & (or packages) | I used two modules (Main + Twitter)
 
 ## Example Project :  Twitter :
 
