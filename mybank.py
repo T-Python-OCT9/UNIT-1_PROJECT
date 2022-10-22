@@ -52,7 +52,7 @@ class Bank:
         self.__stats = value
     
     def get_stats(self):
-        return f'{get_name()} Account Is: {self.__stats}'
+        return f' The Account Is: {self.__stats}'
 
     # methods
     def deposit(self,value):
@@ -63,13 +63,16 @@ class Bank:
             
 
     def withdraw(self, value):
-        if not isinstance(value, int) and value <= 0:
-            raise ValueError('Please Enter Value Larger Than Zero')
+        if self.__stats == 'close':
+            print('Your Account is Close Try Later !!')
         else:
-             if self.__balance > value:
-                self.__balance = self.__balance - value
-             else:
-                print('This Number is Not Avialable In Your Account')
+            if not isinstance(value, int) and value <= 0:
+                raise ValueError('Please Enter Value Larger Than Zero')
+            else:
+                if self.__balance >= value:
+                    self.__balance = self.__balance - value
+                else:
+                    print('This Number is Not Avialable In Your Account')
            
             
     
