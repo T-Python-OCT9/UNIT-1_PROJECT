@@ -16,9 +16,8 @@
 #### Overview: An app suggests something to watch by taking from the user what kind of a series and movies enjoy to watch, and the app will show what the perfect match for their type is since it's hard to decide what you want to watch sometimes. There are two primary users the admin and the end-user. 
 
 #### As a end-user I should be able to do the following :
-- Browse the Shows. 
+- Browse the categories. 
 - View the shows info (summary, type, number of episodes , language , rating.)
-- Search for shows.
 - Get recommendations based on thier types of shows .
 - Add shows to thier fav list .
 - list thier fav shows list. 

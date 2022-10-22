@@ -9,8 +9,9 @@ def user_suggestions():
    print("...."*3)
    #Categories sets start...
    categories = {"Action.","Kids.","Docuseries.","Drama.","Crimes.","Comedies."}
+   any_show={}
 
-   action ={"The Batman","Kimetsu no Yaiba: Mugen Ressha-hen","Memory","Jurassic World Dominion","Spider-Man: No Way Home","Doctor Strange in the Multiverse of Madness","Ambulance","Hunter X Hunter: Phantom Rouge"}
+   action ={"The Batman","Kimetsu no Yaiba","Memory","Jurassic World Dominion","Spider-Man: No Way Home","Doctor Strange in the Multiverse of Madness","Ambulance","Hunter X Hunter: Phantom Rouge"}
 
    drama={"A silent Voice","Grave of the Fireflies","Parasite","Joker","A Beautiful Mind","The Good Doctor","Tomorrow"}
    
@@ -23,17 +24,39 @@ def user_suggestions():
 
    #Categories sets end...
 
-   print("Here you can choose and write what kind of a series and movies you enjoy to watch:\n ")
+   print (f"Here you can choose and write what kind of a series and movies you enjoy to watch:\n ")
    # for loop to print the list with numbers
    for index,categories in enumerate(categories):
     print('{}.{}'.format(index+1,categories))
 
-   #massage for the user to enter the categories
+#massage for the user to enter the categories
+#if statment to check what the user decied and will show a list of shows based on what they choosed... 
    user_choosed = input("What you decied for today?\n")
-   
-   if user_choosed == "":
-    pass
-   print()
-   
+   if user_choosed == "action":
+      print(f"Here is some recommedation for action categories :\n")
+      for index,action in enumerate(action):
+       print('{}.{}'.format(index+1,action))  
+   elif user_choosed == "drama":
+      print(f"Here is some recommedation for drama categories :\n")
+      for index,drama in enumerate(drama):
+       print('{}.{}'.format(index+1,drama)) 
+   elif user_choosed == "comedies":
+      print(f"Here is some recommedation for comedies categories :\n")
+      for index,comedies in enumerate(comedies):
+       print('{}.{}'.format(index+1,comedies))
+   elif user_choosed == "crimes":
+      print(f"Here is some recommedation for crimes categories :\n")
+      for index,crimes in enumerate(crimes):
+       print('{}.{}'.format(index+1,crimes)) 
+   elif user_choosed == "docuseries":
+      print(f"Here is some recommedation for docuseries categories :\n")
+      for index,docuseries in enumerate(docuseries):
+       print('{}.{}'.format(index+1,docuseries))
+   elif user_choosed == "kids":
+      print(f"Here is some recommedation for kids categories :\n")
+      for index,kids in enumerate(kids):
+       print('{}.{}'.format(index+1,kids)) 
+
+           
 
 print(user_suggestions())
