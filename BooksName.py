@@ -1,8 +1,7 @@
 import random
-
+import BooksPrice
 class BooksName:
     Books = ["Do not give up","History remains open","Les Misérables","Night train to Lisbon"]
-    
 
     book = input("Enter the name of the book you want: ")
 
@@ -14,10 +13,20 @@ class BooksName:
             print("sorry this book is not in the librari.")
         break 
 
-     
-
-    writers = {"Turki Alhamad" : "History remains open", "Victor" : "Les Misérables","Pascal" : "Night train to Lisbon","Dr. Ayed Al-Qarni" : "Do not give up"}
     
+    '''writers =  [
+            {'Turki Alhamad': [ 'History remains open','East valley','Memory wounds']},
+            {"Victor":[ "Les Misérables"]},
+            {"Pascal": [ "Night train to Lisbon"]},
+            {"Dr. Ayed Al-Qarni": ["Do not give up"]}
+            ]'''
+
+
+    writers = {'Turki Alhamad': 'History remains open',"Victor":"Les Misérables","Pascal":"Night train to Lisbon","Dr. Ayed Al-Qarni": "Do not give up"}
+    writers["Turki Alhamad"] = ['East valley','Memory wounds','History remains open']
+     #print(writers["Turki Alhamad"])
+
+     #ممكن اسوي الاكسبشن هنا لو دخل اليوزر اسم الكاتب غلط
     authors = input("Enter the author name to view his existing books: ")
 
     for j in writers.values():
@@ -38,11 +47,17 @@ class BooksName:
             return random.choice(Books)
             
         if randomly == 'no' :
-           print("OK,Thank you") 
+           #print("OK,Thank you")
+            return 
 
     book_random = print("We have suggested book",RandomBook(Books),"for you")  
 
-    #lambda          
+    #lambda
+    def FunctionPrice1(): 
+       p = int(print("to view books prices last more than 50 you shoud write 1 pleas."))
+       #if(p == 1):
+           #FunctionPrice2()
+
     
 
 
