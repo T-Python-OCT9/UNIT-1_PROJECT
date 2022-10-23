@@ -1,17 +1,17 @@
-import project_main 
+#import project_main 
 
 # this function take the order and ask customr to confirm order to proceed the next step
 def invoice (x:list)  -> list:
     answer = input ("Do you want to add anything else? : please press y for yes and n for no ")
     if answer == "y" or answer == "Y":
       print("Back to menu")
-      project_main.menu()
+      #project_main.menu()
     elif answer == "n" or answer == "N":
       print("We will proceed to checkout .... ")
       print_invoice(x)
     else : 
         print("there is somthing wrong please let us start again ")
-        project_main.menu()
+       # project_main.menu()
     
     
 # this function will print the invoice  

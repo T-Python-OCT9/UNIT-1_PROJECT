@@ -1,14 +1,14 @@
-import coffee_funcs 
-
+from coffee_funcs import *
 #Greeting
 
 Customer = str(input("Hi , Please type your name : "))
-print(f" Welcome {Customer} Can I take your order?")
+
 
 # main_ menu
-def menu() -> list :
+def menu(x:str) -> list :
+  print(f" Welcome {x} Can I take your order?")
   print("please check the menu and let us know your orders")
-  menu = {"Black_Coffee_M" : 10 , "Black_Coffee_S": 7, "Flat white_M" :15 , "Flat white_S" :12, "Espresso_M" :10 , "Espresso_S" :8 , "Macchiato_M" :18 , "Macchiato_S":15, "coppuccino_M":18 , "coppuccino_S":15, "Hot_Chocolate_M":18 , "Hot_Chocolate_S" :16, "Latte_M":16 ,"Latte_S" :14, "Chicken Sandwich":12 , "Nutella Sandwich" : 11,"Egg Sandwich" : 12, "cheesecake" : 25 , "Cookie" : 6, "brownies" :8 } 
+  menu1 = {"Black_Coffee_M" : 10 , "Black_Coffee_S": 7, "Flat white_M" :15 , "Flat white_S" :12, "Espresso_M" :10 , "Espresso_S" :8 , "Macchiato_M" :18 , "Macchiato_S":15, "coppuccino_M":18 , "coppuccino_S":15, "Hot_Chocolate_M":18 , "Hot_Chocolate_S" :16, "Latte_M":16 ,"Latte_S" :14, "Chicken Sandwich":12 , "Nutella Sandwich" : 11,"Egg Sandwich" : 12, "cheesecake" : 25 , "Cookie" : 6, "brownies" :8 } 
   items = []
   q=[]
   z=[]
@@ -106,19 +106,21 @@ def menu() -> list :
         item = input("choose your order: ")
         if item == "C" or item == "c":
             Q =int(input("How many items you want ? : "))
-            i = 0 
-            for i in range(i , Q+1) :
+            i=0 
+            for i in range(i , Q) :
                 items.append("Chicken Sandwich") 
             print("the Chicken Sandwich has been added to your cart , Do you need anythings else ? :")
         elif item == "N" or item == "n":
             Q=int(input("How many items you want ? : "))
-            items.append("Nutella Sandwich") 
-            q.append(Q)
+            i=0 
+            for i in range(i , Q) :
+                items.append("Nutella Sandwich")
             print("the Nutella Sandwich has been added to your cart , Do you need anythings else ? :")
         elif item == "E" or item == "e":
             Q=int(input("How many items you want ? : "))
-            items.append("Egg Sandwich") 
-            q.append(Q)
+            i=0 
+            for i in range(i , Q) :
+                items.append("Egg Sandwich")
             print("the Egg Sandwich has been added to your cart , Do you need anythings else ? :")
        
         
@@ -132,30 +134,36 @@ def menu() -> list :
 
         if item == "C" or item == "c":
             Q=int(input("How many items you want ? : "))
-            items.append("cheesecake") 
-            q.append(Q)
+            i=0 
+            for i in range(i , Q) :
+                items.append("cheesecake")
             print("the cheesecake has been added to your cart , Do you need anythings else ? :")
         elif item == "O" or item == "o":
             Q=int(input("How many items you want ? : "))
-            items.append("Cookie") 
-            q.append(Q)
+            i=0 
+            for i in range(i , Q) :
+                items.append("Cookie")
             print("the Cookie has been added to your cart , Do you need anythings else ? :")
         elif item == "B" or item == "b":
             Q=int(input("How many items you want ? : "))
-            items.append("brownies") 
-            q.append(Q)
+            i=0 
+            for i in range(i , Q) :
+                items.append("brownies")
             print("the brownies has been added to your cart , Do you need anythings else ? :")
         #checkOut
     elif choice == "Q" or choice == "q" :
         
         print("Let us proceed to checkout!")
-        coffee_funcs.invoice(items) 
+       
+        #invoice(items)
+        print_invoice(items ,Customer)
+        menu()
         done = True    
     else:
         print("Invalid Choice")
 
 
-menu()
+cart= menu(Customer)
 
 #elif ask_for_order == "n":
  #   need_help = input("Do you want any help for choose your coffee ? write y for yes and n for no")

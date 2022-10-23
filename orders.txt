@@ -14,4 +14,6 @@
  This is your orders {'Cookie': 6}
  This is your orders {'Cookie': 6, 'coppuccino_S': 15}
  This is your orders {'cheesecake': 25}
+ This is your orders {}
+ This is your orders {'Chicken Sandwich': 12}
  
