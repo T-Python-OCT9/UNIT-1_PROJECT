@@ -105,9 +105,9 @@ def menu() -> list :
         print("Q - Quit")
         item = input("choose your order: ")
         if item == "C" or item == "c":
-            Q=int(input("How many items you want ? : "))
-            items.append("Chicken Sandwich") 
-            q.append(Q)
+            Q=input("How many items you want ? : ")
+            for i in Q:
+              items.append("Chicken Sandwich") 
             print("the Chicken Sandwich has been added to your cart , Do you need anythings else ? :")
         elif item == "N" or item == "n":
             Q=int(input("How many items you want ? : "))
@@ -148,7 +148,7 @@ def menu() -> list :
     elif choice == "Q" or choice == "q" :
         
         print("Let us proceed to checkout!")
-        coffee_funcs.invoice(items, q) 
+        coffee_funcs.invoice(items) 
         done = True    
     else:
         print("Invalid Choice")

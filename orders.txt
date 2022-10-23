@@ -12,4 +12,6 @@
  This is your orders {'Macchiato_M': 18, 'Cookie': 6, 'Egg Sandwich': 12}
  This is your orders {'Chicken Sandwich': 12, 'Latte_M': 16}
  This is your orders {'Cookie': 6}
+ This is your orders {'Cookie': 6, 'coppuccino_S': 15}
+ This is your orders {'cheesecake': 25}
  
