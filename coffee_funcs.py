@@ -1,4 +1,3 @@
-#import project_main 
 
 # this function take the order and ask customr to confirm order to proceed the next step
 def invoice (x:list)  -> list:
@@ -15,7 +14,7 @@ def invoice (x:list)  -> list:
     
     
 # this function will print the invoice  
-def print_invoice(x :list):
+def print_invoice(x :list ,y:str):
     menu_1 = {"Black_Coffee_M" : 10 , "Black_Coffee_S": 7, "Flat white_M" :15 , "Flat white_S" :12, "Espresso_M" :10 , "Espresso_S" :8 , "Macchiato_M" :18 , "Macchiato_S":15, "coppuccino_M":18 , "coppuccino_S":15, "Hot_Chocolate_M":18 , "Hot_Chocolate_S" :16, "Latte_M":16 ,"Latte_S" :14, "Chicken Sandwich":12 , "Nutella Sandwich" : 11,"Egg Sandwich" : 12, "cheesecake" : 25 , "Cookie" : 6, "brownies" :8 } 
     print(" Your invoice")
     print("  Item :                Price :")
@@ -23,8 +22,19 @@ def print_invoice(x :list):
     for i in x : 
         if i in menu_1:
             print(f"- {(i)} ***** : {(menu_1[i])} RS")
-            item = {i : menu_1[i] }
-            order.update(item)
+            #item = {i : menu_1[i] }
+            if i not in order:
+              item = {i : menu_1[i] }
+              order.update(item)
+            elif i in order:
+              item = { "~~" : menu_1[i] }
+              order.update(item)
+            print (order)
+            file = open(f'{y}.txt', "a+", encoding="utf-8")
+            file.write(f"This is {y} orders \n {x}\n ")
+            file.close()
+           
+
         else: 
             print("Your cart is empty")
     
@@ -41,7 +51,8 @@ def print_invoice(x :list):
         done = False
         while not done:
           if answer == "a" or answer == "A":
-            project_main.menu()
+            pass
+            #project_main.menu()
           elif answer == "r" or answer == "B":
             delete_item = input("please type the item  : ")
             del order[delete_item]
