@@ -1,9 +1,0 @@
-This is uuuuuu orders 
- ['Chicken Sandwich', 'Chicken Sandwich', 'Cookie', 'Latte_S']
- This is uuuuuu orders 
- ['Chicken Sandwich', 'Chicken Sandwich', 'Cookie', 'Latte_S']
- This is uuuuuu orders 
- ['Chicken Sandwich', 'Chicken Sandwich', 'Cookie', 'Latte_S']
- This is uuuuuu orders 
- ['Chicken Sandwich', 'Chicken Sandwich', 'Cookie', 'Latte_S']
- 

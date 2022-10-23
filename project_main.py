@@ -1,4 +1,5 @@
 from coffee_funcs import *
+from Items import * 
 #Greeting
 
 Customer = str(input("Hi , Please type your name : "))
@@ -17,6 +18,7 @@ def menu(x:str) -> list :
     print("S - Sandwich")
     print("K - Cake")
     print("Q - Checkout")
+    print("D - Coffee type")
     choice = input(":: ")
     if choice == "c" or choice == "C":
         print("Coffee Menu")
@@ -28,6 +30,8 @@ def menu(x:str) -> list :
         print("H - Hot_Chocolate")
         print("L - latte")
         print("Q - Quit")
+        
+
         item = input("choose your order: ")
               
         if item == "B" or item == "b":
@@ -36,8 +40,6 @@ def menu(x:str) -> list :
               items.append("Black_Coffee_M")
             elif Z== "S" or Z == "s":
               items.append("Black_Coffee_S")
-            Q=int(input("How many items you want ? : "))
-            q.append(Q)
             print("the black coffee has been added to your cart, Do you need anythings else ? :")
         elif item == "F" or item == "f":
             Z= input ("please choose the size : M for medium and S for small ")
@@ -45,8 +47,6 @@ def menu(x:str) -> list :
               items.append("Flat white_M")
             elif Z== "S" or Z == "s":
               items.append("Flat white_S")
-            Q=int(input("How many items you want ? : "))
-            q.append(Q)
             print("the flat white has been added to your cart Do you need anythings else ? :")
         elif item == "E" or item == "e":
             Z= input ("please choose the size : M for medium and S for small ")
@@ -54,8 +54,6 @@ def menu(x:str) -> list :
               items.append("Espresso_M")
             elif Z== "S" or Z == "s":
               items.append("Espresso_S")
-            Q=int(input("How many items you want ? : "))
-            q.append(Q)
             print("the Espresso has been added to your cart Do you need anythings else ? :")
         elif item == "M" or item == "m":
             Z= input ("please choose the size : M for medium and S for small ")
@@ -63,8 +61,6 @@ def menu(x:str) -> list :
               items.append("Macchiato_M")
             elif Z== "S" or Z == "s":
               items.append("Macchiato_S")
-            Q=int(input("How many items you want ? : "))
-            q.append(Q)
             print("the Macchiato has been added to your cart Do you need anythings else ? :")
         elif item == "C" or item == "c":
             Z= input ("please choose the size : M for medium and S for small ")
@@ -72,8 +68,6 @@ def menu(x:str) -> list :
               items.append("coppuccino_M")
             elif Z== "S" or Z == "s":
               items.append("coppuccino_S")
-            Q=int(input("How many items you want ? : "))
-            q.append(Q)
             print("the cappuccino has been added to your cart Do you need anythings else ? :")
         elif item == "H" or item == "h":
             Z= input ("please choose the size : M for medium and S for small ")
@@ -81,8 +75,6 @@ def menu(x:str) -> list :
               items.append("Hot_Chocolate_M")
             elif Z== "S" or Z == "s":
               items.append("Hot_Chocolate_S")
-            Q=int(input("How many items you want ? : "))
-            q.append(Q)
             print("the Hot Chocolate has been added to your cart Do you need anythings else ? :")
         elif item == "L" or item == "l":
             Z= input ("please choose the size : M for medium and S for small ")
@@ -90,8 +82,6 @@ def menu(x:str) -> list :
               items.append("Latte_M")
             elif Z == "S" or Z == "s":
               items.append("Latte_S")
-            Q=int(input("How many items you want ? : "))
-            q.append(Q) 
             print("the Hot latte has been added to your cart, Do you need anythings else ? :")
        
         
@@ -155,8 +145,42 @@ def menu(x:str) -> list :
        
         #invoice(items)
         print_invoice(items ,Customer)
-        menu()
-        done = True    
+        menu(Customer)
+        done = True  
+    elif choice == "D" or choice == "d" :
+        print(" Menu")
+        print("D - Description")
+        print("C - calories")
+        print("P - Price")
+        item = input(":: ")
+        if item == "D" or item == "d":
+          print(f"The Description of Black Coffee is : {Black_Coffee.description}")
+          print(f"The Description of Mocha is :{Mocha.description}")
+          print(f"The Description of Cappuccino is :{cappuccino.description}")
+          print(f"The Description of Esparesso is :{espresso.description}")
+          print(f"The Description of Macchiato is {macchiato.description}")
+          print(f"The Description of Hot Chocolate is {Hot_Chocolate.description}")
+          print(f"The Description of Latte is {latte.description}")
+          print(f"The Description of Flat White is {flat_white.description}")
+        elif item == "C" or item == "c":
+          print(f"The Calories of Black Coffee is : {Black_Coffee.calories}")
+          print(f"The Calories of Mocha is :{Mocha.calories}")
+          print(f"The Calories of Cappuccino is :{cappuccino.calories}")
+          print(f"The Calories of Esparesso is :{espresso.calories}")
+          print(f"The Calories of Macchiato is {macchiato.calories}")
+          print(f"The Calories of Hot Chocolate is {Hot_Chocolate.calories}")
+          print(f"The Calories of Latte is {latte.calories}")
+          print(f"The Calories of Flat White is {flat_white.calories}")
+        elif item == "P" or item == "p":
+          print(f"The price of Black Coffee is : {Black_Coffee.price}")
+          print(f"The price of Mocha is : {Mocha.price}")
+          print(f"The price of Cappuccino is : {cappuccino.price}")
+          print(f"The price of Espresso is : {espresso.price}")
+          print(f"The price of Macchiato is : {macchiato.price}")
+          print(f"The price of Hot Chocolate is : {Hot_Chocolate.price}")
+          print(f"The price of Latte is : {latte.price}")
+          print(f"The price of Flat White is : {flat_white.price}")
+        input("press any thin for Back t menu")  
     else:
         print("Invalid Choice")
 

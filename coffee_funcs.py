@@ -1,17 +1,3 @@
-
-# this function take the order and ask customr to confirm order to proceed the next step
-def invoice (x:list)  -> list:
-    answer = input ("Do you want to add anything else? : please press y for yes and n for no ")
-    if answer == "y" or answer == "Y":
-      print("Back to menu")
-      #project_main.menu()
-    elif answer == "n" or answer == "N":
-      print("We will proceed to checkout .... ")
-      print_invoice(x)
-    else : 
-        print("there is somthing wrong please let us start again ")
-       # project_main.menu()
-    
     
 # this function will print the invoice  
 def print_invoice(x :list ,y:str):
@@ -19,35 +5,21 @@ def print_invoice(x :list ,y:str):
     print(" Your invoice")
     print("  Item :                Price :")
     order = {}
-    
-    for i in x : 
-        item= {}
-        if (i in menu_1 and i not in order):
-            order.update(item)
-        elif (i in menu_1 and i in order):
-            item = { "~~" : menu_1[i] }
-            order.update(item)
+    print(f"- {(i)} ***** : {(menu_1[i])} RS")
+    for i in x:
+      if (i in menu_1 and i not in order):
+        item= {i : menu_1[i] }
+        order.update(item)
+      elif (i in menu_1 and i in order):
+        item = { "~~" : menu_1[i] }
+        order.update(item)
             #print(f"- {(i)} ***** : {(menu_1[i])} RS")
-            #item = {i : menu_1[i] }
-            #print(f"- {(i)} ***** : {(menu_1[i])} RS")
-            #if i not in order:
-              #item = {i : menu_1[i] }
-              #order.update(item)
-            #elif i in order:
-             # item = { "~~" : menu_1[i] }
-              #order.update(item)
-    print (order)
+            #print (order)
     file = open(f'{y}.txt', "a+", encoding="utf-8")
-    file.write(f"This is {y} orders \n {x}\n ")
+    file.write(f"This is the cart of {y} order \n {x}\n ")
     file.close()
-           
-
-        else: 
-            print("Your cart is empty")
-    
     total = sum(order.values())  
     print(f"The total amount is : {total} RS")  
-             
     answer = input("Please press C to checkout or E for edit your order  :")
             # we need to add quantity?
     if answer == "c" or answer == "C" :
@@ -58,7 +30,7 @@ def print_invoice(x :list ,y:str):
         done = False
         while not done:
           if answer == "a" or answer == "A":
-            pass
+            return
             #project_main.menu()
           elif answer == "r" or answer == "B":
             delete_item = input("please type the item  : ")

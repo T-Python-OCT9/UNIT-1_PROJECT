@@ -1,19 +1,2 @@
-
- This is your orders {'brownies': 8}
- This is your orders {'brownies': 8, 'cheesecake': 25}
- This is your orders {'brownies': 8, 'Flat white_M': 15}
- This is your orders {'Nutella Sandwich': 11, 'Hot_Chocolate_M': 18}
- This is your orders {'Nutella Sandwich': 11, 'coppuccino_M': 18}
- This is your orders {'Nutella Sandwich': 11, 'Hot_Chocolate_M': 18}
- This is your orders {'Espresso_M': 10, 'Chicken Sandwich': 12}
- This is your orders {'Chicken Sandwich': 12, 'Latte_M': 16}
- This is your orders {'Chicken Sandwich': 12, 'Flat white_S': 12}
- This is your orders {'Egg Sandwich': 12, 'Espresso_S': 8}
- This is your orders {'Macchiato_M': 18, 'Cookie': 6, 'Egg Sandwich': 12}
- This is your orders {'Chicken Sandwich': 12, 'Latte_M': 16}
- This is your orders {'Cookie': 6}
- This is your orders {'Cookie': 6, 'coppuccino_S': 15}
- This is your orders {'cheesecake': 25}
- This is your orders {}
- This is your orders {'Chicken Sandwich': 12}
+This is your orders {'Chicken Sandwich': 12, '~~': 6, 'Cookie': 6}
  
