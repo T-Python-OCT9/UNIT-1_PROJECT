@@ -1,10 +1,11 @@
+import datetime as dt
 class Bank:
 
-    def __init__(self, name, password, id, balance):
+    def __init__(self, name, password, id):
         self.__name = name
         self.__password = password
         self.__id = id
-        self.__balance = balance
+        self.__balance =  0
         self.__stats = 'open'
         
     # user_name getter and setter
@@ -15,7 +16,7 @@ class Bank:
             raise ValueError('The Name Should Be string !!')
     
     def get_name(self):
-        return f'Your Name Is: {self.__name}'
+        return self.__name
 
     # password getter and setter
     def set_password(self, value: str):
@@ -25,7 +26,7 @@ class Bank:
             raise ValueError('The Password Should Be More Than 8 Digits !!')
     
     def get_password(self):
-        return f'Your Passwrod Is: {self.__password}'
+        return self.__password
     
     # phone_number getter and setter
     def set_id(self, value: str):
@@ -35,7 +36,7 @@ class Bank:
             raise ValueError("The ID Should Be 10 Digits !!")
 
     def get_id(self):
-        return f'Your ID Is: {self.__id}'
+        return self.__id
 
     # balance getter and setter    
     def set_balance(self, value: int):
@@ -45,14 +46,14 @@ class Bank:
             raise ValueError("The Balance Should Be Integer !!")
             
     def get_balance(self):
-        return f'Your Balance Is: {self.__balance}'
+        return self.__balance
 
     # stats getter and setter
     def set_status(self, value):
         self.__stats = value
     
     def get_status(self):
-        return f'The Account Is: {self.__stats}'
+        return self.__stats
 
     # methods
     def deposit(self,value):
@@ -73,6 +74,13 @@ class Bank:
                     self.__balance = self.__balance - value
                 else:
                     print('This Number is Not Avialable In Your Account')
+    
+    def get_date():
+        return f'Date: {dt.datetime.today()}'
+
+
+    
+
            
             
     
