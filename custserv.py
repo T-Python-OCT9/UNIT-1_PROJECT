@@ -25,15 +25,15 @@ class custserv:
 
 
     def get_rating(self):
-        
-        return statistics.mean(self.rating_list)
-
+       x=lambda  rating_list : sum(rating_list) / len(rating_list)
+       return x(self.rating_list)
+'''
 c=custserv()
 c.service_rating(5)
-c.service_rating(5)
+c.service_rating(4)
 c.service_rating(5)
 print(c.get_rating())
-
+'''
 
 
         #return statistics.mean(self.rating_list)

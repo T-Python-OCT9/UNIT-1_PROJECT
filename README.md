@@ -6,7 +6,7 @@
 - Use lists or dictionaries or tuples. done 
 - Use loops. done 
 - Use functions that return an output . done
-- Use a Lambda function. not 
+- Use a Lambda function. done 
 - Use at least 1 Class. done 
 - Use some form of Error Handling . done
 - Organize Your Code into modules & (or packages) done 
