@@ -17,11 +17,11 @@
 
 #### As a end-user I should be able to do the following :
 - Browse the categories. 
-- View the shows info (summary, type, number of episodes , language , rating.)
+- View the shows info (summary, type, number of episodes , rating.)
 - Get recommendations based on thier types of shows .
 - Add shows to thier fav list .
 - list thier fav shows list. 
-- Continue to checkout .  
+  
 
 
 
