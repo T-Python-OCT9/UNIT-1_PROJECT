@@ -1,6 +1,7 @@
 # UNIT-1_PROJECT
 
-## Based on what you’ve learned until now , create a project of your choosing (impress us with your imagination) . This project must at least satisfy the following minimum requirements :
+## Based on what you’ve learned until now , create a project of your choosing (impress us with your imagination) . 
+This project must at least satisfy the following minimum requirements :
 
 - Must be interactive on CLI.
 - Use lists or dictionaries or tuples. 
@@ -36,5 +37,6 @@ Each one of them should be able to do the following tasks for the wallet to func
  - type in 4 to deposit money
  - type in 5 to check summary
  - type in 6 to quit 
+
 
 ### For your project. Edit this README.md file to include your own project name,  overview, user stories, and usage. 

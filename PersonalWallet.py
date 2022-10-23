@@ -1,16 +1,7 @@
-# UNIT-1_PROJECT
+import functions
+import random
 
-## Based on what you’ve learned until now , create a project of your choosing (impress us with your imagination) . This project must at least satisfy the following minimum requirements :
-
-- Must be interactive on CLI.
-- Use lists or dictionaries or tuples. 
-- Use loops.
-- Use functions that return an output . 
-- Use a Lambda function.
-- Use at least 1 Class.
-- Use some form of Error Handling .
-- Organize Your Code into modules & (or packages)
-
+''' 
 ## Example Project :  A Personal Wallet :
 
 #### Overview : A Personal Wallet provides services to users. 
@@ -29,7 +20,7 @@ Each one of them should be able to do the following tasks for the wallet to func
 #### Usage :
  Explain to the user how to use your project . 
  for example:
- - type in the options showed to the used 
+ - type in the options showed to be used 
  - type in 1 for openning an account
  - type in 2 for closing an account
  - type in 3 to withdraw money 
@@ -37,4 +28,10 @@ Each one of them should be able to do the following tasks for the wallet to func
  - type in 5 to check summary
  - type in 6 to quit 
 
-### For your project. Edit this README.md file to include your own project name,  overview, user stories, and usage. 
+'''
+print("*"*55)
+print("\nThis Project was made by Abdullah Alobaid :D\n")
+print("*"*55)
+
+
+functions.PersonalWallet.main()
