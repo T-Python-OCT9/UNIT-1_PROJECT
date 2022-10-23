@@ -1,2 +1,0 @@
-This is your orders {'Chicken Sandwich': 12, '~~': 6, 'Cookie': 6}
- 

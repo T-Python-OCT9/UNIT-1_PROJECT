@@ -1,3 +1,0 @@
-This is ooooo orders 
- ['Chicken Sandwich', 'Chicken Sandwich', 'Cookie', 'Cookie']
- 
