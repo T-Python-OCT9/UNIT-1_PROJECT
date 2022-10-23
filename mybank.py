@@ -48,11 +48,11 @@ class Bank:
         return f'Your Balance Is: {self.__balance}'
 
     # stats getter and setter
-    def set_stats(self, value):
+    def set_status(self, value):
         self.__stats = value
     
-    def get_stats(self):
-        return f' The Account Is: {self.__stats}'
+    def get_status(self):
+        return f'The Account Is: {self.__stats}'
 
     # methods
     def deposit(self,value):

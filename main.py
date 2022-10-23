@@ -34,8 +34,8 @@ def admin():
                 Bank.set_id(obj1,input('Please Enter The New ID: '))
                 print(Bank.get_id(obj1))
             elif option == '3':
-                Bank.set_stats(obj1,input('Please Enter The New Stats: '))
-                print(Bank.get_stats(obj1))
+                Bank.set_status(obj1,input('Please Enter The New Status: '))
+                print(Bank.get_status(obj1))
             elif option == '4':
                 print('---Thank You---')
                 break
@@ -58,7 +58,7 @@ def main():
     while True:
         print('-------------------------')
         print('Type "exit" To Terminate The Program')
-        
+
         name = input('Please Enter Your Name: ')
         if name == 'exit':
             print('---Good Bey---')
@@ -67,7 +67,7 @@ def main():
         password = input('Please Enter Your Password: ')
         if chick_password(password):
             user() 
-        elif filter(lambda : password == 'aa', password):
+        elif filter(lambda : password == 'aa', password): #  i can just do. password == 'aa' 
             admin()
         else:
             print('invalid input !!')
