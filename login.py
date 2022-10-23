@@ -1,25 +1,26 @@
-import os
 from getpass import getpass
-from cli_view import CommandLineView
 
 
-class LoginView(CommandLineView):
+def loginEmployee(employees_list: list):
+    username = input(' Username: ')
+    password = getpass(prompt=' Password: ')
+    for employee in employees_list:
+        if username == employee.user:
+            employee_user = employee.user
+            employee_password = employee.password
+    try:
+        if (username == employee_user and password == employee_password):
+            login = True
+    except:
+        login = False
+    return login
 
-    def __init__(self, user: str, password: str) -> None:
-        self.__user = user
-        self.__password = password
 
-    def commandLineListener(self) -> str:
-        insert_user: str = ''
-        insert_password: str = ''
-        while not (insert_user == self.__user and insert_password == self.__password):
-            if len(insert_user or insert_password) >= 2:
-                os.system('clear')
-                print(f"\n\t\tLogin\n\n")
-                print(' \t# Username or password is wrong\n')
-            else:
-                os.system('clear')
-                print(f"\n\t\tLogin\n\n")
-            insert_user = input(' Username: ')
-            insert_password = getpass(prompt=' Password: ')
-        return 'logged'
+def loginManager(manager_user: str, manager_password: str):
+    username = input(' Username: ')
+    password = getpass(prompt=' Password: ')
+    if (username == manager_user and password == manager_password):
+        login = True
+    else:
+        login = False
+    return login
