@@ -3,10 +3,9 @@ from atexit import register
 
 
 from courses import courses 
-c=courses()
+c=courses('ali','oopo',200)
 
 class student:
-    
 
     student_info=[]
 

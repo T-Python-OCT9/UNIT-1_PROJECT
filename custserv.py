@@ -1,5 +1,3 @@
-import statistics
-
 
 class custserv:
 
@@ -7,10 +5,13 @@ class custserv:
 
     def most_asked_QI(self):
 
-        file1= open("most_asked.txt", 'r', encoding="utf-8")
+        file1= open("most_asked.txt", 'r+', encoding="utf-8")
         lines=file1.readlines()
-        for l in lines:
-                print(l)
+        for line in lines:
+            print()
+            print(line)
+        
+        file1.close()
                  
 
     def omplaints_suggestions(self):
@@ -34,9 +35,6 @@ c.service_rating(4)
 c.service_rating(5)
 print(c.get_rating())
 '''
-
-
-        #return statistics.mean(self.rating_list)
     
 
 
