@@ -105,9 +105,10 @@ def menu() -> list :
         print("Q - Quit")
         item = input("choose your order: ")
         if item == "C" or item == "c":
-            Q=input("How many items you want ? : ")
-            for i in Q:
-              items.append("Chicken Sandwich") 
+            Q =int(input("How many items you want ? : "))
+            i = 0 
+            for i in range(i , Q+1) :
+                items.append("Chicken Sandwich") 
             print("the Chicken Sandwich has been added to your cart , Do you need anythings else ? :")
         elif item == "N" or item == "n":
             Q=int(input("How many items you want ? : "))
@@ -154,10 +155,7 @@ def menu() -> list :
         print("Invalid Choice")
 
 
-
-
-cart = menu()
-
+menu()
 
 #elif ask_for_order == "n":
  #   need_help = input("Do you want any help for choose your coffee ? write y for yes and n for no")
