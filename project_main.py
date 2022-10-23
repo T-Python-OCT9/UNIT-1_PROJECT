@@ -1,13 +1,13 @@
- 
+import coffee_funcs 
 
 #Greeting
+
 Customer = str(input("Hi , Please type your name : "))
 print(f" Welcome {Customer} Can I take your order?")
 
+# main_ menu
 def menu() -> list :
-  ask_for_order = input("Please type Y if you ready or N if not yet  :") 
-  if ask_for_order == "y":
-    print("please check the menu and let us know your orders")
+  print("please check the menu and let us know your orders")
   menu = {"Black_Coffee_M" : 10 , "Black_Coffee_S": 7, "Flat white_M" :15 , "Flat white_S" :12, "Espresso_M" :10 , "Espresso_S" :8 , "Macchiato_M" :18 , "Macchiato_S":15, "coppuccino_M":18 , "coppuccino_S":15, "Hot_Chocolate_M":18 , "Hot_Chocolate_S" :16, "Latte_M":16 ,"Latte_S" :14, "Chicken Sandwich":12 , "Nutella Sandwich" : 11,"Egg Sandwich" : 12, "cheesecake" : 25 , "Cookie" : 6, "brownies" :8 } 
   items = []
   q=[]
@@ -148,12 +148,11 @@ def menu() -> list :
     elif choice == "Q" or choice == "q" :
         
         print("Let us proceed to checkout!")
-        function.invoice(items, q) 
-        done = True
-
-        
+        coffee_funcs.invoice(items, q) 
+        done = True    
     else:
         print("Invalid Choice")
+
 
 
 
