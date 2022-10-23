@@ -19,20 +19,27 @@ def print_invoice(x :list ,y:str):
     print(" Your invoice")
     print("  Item :                Price :")
     order = {}
+    
     for i in x : 
-        if i in menu_1:
-            print(f"- {(i)} ***** : {(menu_1[i])} RS")
+        item= {}
+        if (i in menu_1 and i not in order):
+            order.update(item)
+        elif (i in menu_1 and i in order):
+            item = { "~~" : menu_1[i] }
+            order.update(item)
+            #print(f"- {(i)} ***** : {(menu_1[i])} RS")
             #item = {i : menu_1[i] }
-            if i not in order:
-              item = {i : menu_1[i] }
-              order.update(item)
-            elif i in order:
-              item = { "~~" : menu_1[i] }
-              order.update(item)
-            print (order)
-            file = open(f'{y}.txt', "a+", encoding="utf-8")
-            file.write(f"This is {y} orders \n {x}\n ")
-            file.close()
+            #print(f"- {(i)} ***** : {(menu_1[i])} RS")
+            #if i not in order:
+              #item = {i : menu_1[i] }
+              #order.update(item)
+            #elif i in order:
+             # item = { "~~" : menu_1[i] }
+              #order.update(item)
+    print (order)
+    file = open(f'{y}.txt', "a+", encoding="utf-8")
+    file.write(f"This is {y} orders \n {x}\n ")
+    file.close()
            
 
         else: 
