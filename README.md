@@ -18,7 +18,7 @@
 #### As a normal user I should be able to do the following :
 - Deposit to the account. 
 - withdraw from the account.
-- see my balance.
+- view balance.
 
 #### As an admin I should be able to do the following :
 - change user name.
