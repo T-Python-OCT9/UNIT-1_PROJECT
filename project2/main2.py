@@ -18,7 +18,7 @@ print("""       @-_________________-@
 print("          WELCOME TO MY CINNAMA       ")
 rows = int(input("\n Enter number of rows:"))
 columns = int(input("\n Enter the number of seats in each row:"))
-# build seats
+# build
 seat_rows = []
 for i in range(rows):
     seats = []
@@ -27,7 +27,7 @@ for i in range(rows):
     seat_rows.append(seats)
 
 
-def price(rows):
+def calculate_price(rows):
     if rows * columns <= 50:
         return 20
     else:
@@ -46,7 +46,7 @@ total_income = 0
 def booking_ticket():
     rows = int(input("\nEnter row: "))
     columns = int(input("\nEnter column: "))
-    price = price(rows)
+    price = calculate_price(rows)
     answer = input("\nPrice of your ticket is " + str(price) +
                    ". Please enter (y) if you want to book.")
     if answer == 'y':
@@ -59,7 +59,7 @@ def booking_ticket():
         return price
     elif seat_rows[rows - 1][columns - 1] == 'X':
 
-        print(" please enter another the seat already booked ")
+        print("Seat already booked  please enter another seat")
         booking_ticket()
     else:
         return
@@ -87,10 +87,10 @@ def income():
 
 def info(rows, columns):
     user_info = booking_dict[(rows, columns)]
-    print("\nname:" + user_info.Name)
-    print("age:" + user_info.Age)
-    print("price:" + str(user_info.Price))
-    print("Phone :" + str(user_info.Phone))
+    print("\nName:" + user_info.Name)
+    print("Age:" + user_info.Age)
+    print("Ticket price:" + str(user_info.Price))
+    print("Phone no:" + str(user_info.Phone))
 
 
 n = 0
@@ -111,7 +111,6 @@ while n != 5:
 
     elif n == 3:
         print("\nNumber of booked tickets:" + str(number_of_tickets))
-
     elif n == 4:
         rows = int(input("Enter row: "))
         columns = int(input("Enter column: "))
