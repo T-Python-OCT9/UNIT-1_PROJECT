@@ -3,6 +3,7 @@ from MedicineModule import Medicine
 main_loop = True 
 while main_loop:
         
+        print("--------------------Welcome!!--------------------")
         print("--------------------------------------------------")
         print("1- Adding medicine to the store")
         print("2- Display medicine in the store")
