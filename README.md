@@ -28,11 +28,10 @@
 #### Usage :
  Explain to the user how to use your project . 
  for example:
- - type in search product_name to search for a product.
- - type in list_products to show all the products in the grocery.
- - type in show product_name to get information about this product.
- - type in buy product_name to buy the product . 
- - and so on...
+ - type in search by number to navigate in the program.
+ - type in the show name to show the summary for the show.
+ - add to the new favoitre list and list it.
+
 
 
 ### For your project. Edit this README.md file to include your own project name,  overview, user stories, and usage. 
