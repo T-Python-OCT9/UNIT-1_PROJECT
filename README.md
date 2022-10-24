@@ -11,33 +11,37 @@
 - Use some form of Error Handling .
 - Organize Your Code into modules & (or packages)
 
-## Example Project :  An online Grocery Store :
+##  Project :  Online Courses Website:
 
-#### Overview : An online store that sells fruits to customers. This online store has 2 main users. The customer and the manager of the store . Each one of them should be able to do the following tasks for the store to function properly . 
-
-#### As a customer I should be able to do the following :
-- Browse  Products . 
-- View the product info (summary, specs, price, quantity , etc.)
-- Search for Products.
-- Get recommendations for my next purchase based on my purchase history.
-- Add Products to the shopping cart .
-- Remove a product from the shopping cart.
-- List the products in my shopping cart. 
-- Continue to checkout . 
-- Fill in my address for delivery.
-- Get receipt of my purchases.
-- Check delivery status . 
+#### Overview : A website that can register the student in the available courses, the company can add courses and review the students registered in the courses. 
 
 
+#### As a student I should be able to do the following :
+- View the Courses and times.
+- register in a course
+- Exit the browser
+------------
+#### As a Company should be able to do the following :
+- add courses.
+- Browse the students named registered in the courses
+- Exit the browser
+------------
 
 #### Usage :
- Explain to the user how to use your project . 
+ Explain to the student how to use your project . 
  for example:
- - type in search product_name to search for a product.
- - type in list_products to show all the products in the grocery.
- - type in show product_name to get information about this product.
- - type in buy product_name to buy the product . 
- - and so on...
+ - type 's' if you are student
+ - type the field in which you want to register the course
+ - type 'c' to check the avalible courses and times
+ - type 'r' to register in acourse
+ - type your name and the course you want
+ - type 'Exit' to Exit the Website
 
-
-### For your project. Edit this README.md file to include your own project name,  overview, user stories, and usage. 
+  Explain to the company how to use your project . 
+ for example:
+ - type 'c' if you are company
+ - type the field in which you want to add the course
+ - type 'b' to Browse the students name registered in the courses
+ - type 'a' to Add courses
+ - type 'Exit' to Exit the Website
+ 
