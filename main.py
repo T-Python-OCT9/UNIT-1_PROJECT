@@ -5,6 +5,7 @@ print("A perfect day ends with a Coffee Up ...")
 print("_" * 40 +"\n")
 
 while True:
+
     UserName = input("Please enter your name: ")
     print(f"Welcom {UserName.upper()} to our coffee up shop ...\n")
     User1 = User()
@@ -46,7 +47,10 @@ while True:
             break
         else:
             print("You did not make a valid selection.")
-    
-    break
+    More_User = input("Do you have anther user yes or no? ")
+    if More_User.lower() == "yes":
+        pass
+    else:
+        break
 
 
