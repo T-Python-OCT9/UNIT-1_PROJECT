@@ -6,15 +6,14 @@ class Contact:
         self.phone_num = phone_num
         self.name = name
 
-    def setName(self):
-        Name = input("Please Enter your name:")
+    def setName(self, Name):
         if not (isinstance(Name, str)):
             raise ValueError("Name is must be a string!")
         else:
             self.name = Name
     
-    def setNum(self):
-        Phone_number = int(input("Please Enter your num:"))
+    def setNum(self, Phone_number):
+        
         if not (isinstance(Phone_number, int) and len(str(Phone_number))) == 12:
             raise ValueError("Number is must be intger and 12 digits!")
         else:
@@ -40,7 +39,7 @@ class Contact:
             if isinstance(self.phone_num, int) and len(str(self.phone_num)) == 12:
                 contact_num.append(self.phone_num)
             else:
-                raise ValueError("The contact phone number must be a intger and 12")
+                raise ValueError("The contact phone number must be a intger and 12 digits")
             print("The Contact has been added successufully!")
             print(f"The contact name is: {contact_name[i - 1]}")
             print(f"The contact number is: {contact_num[i - 1]}")

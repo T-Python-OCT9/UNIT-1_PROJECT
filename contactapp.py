@@ -1,5 +1,21 @@
 from contact import *
-contact1 = Contact("Mohammed", 966123456789)
+
+contact1 = Contact("Admin", 966123456789)
+
+Name = input("Please Enter your name:")
+Phone_number = int(input("Please Enter your num starts with 966:"))
+
+print(contact1.getName())
+print(contact1.getNum())
+
+
+
+contact1.setName(Name)
+contact1.setNum(Phone_number)
+
+print(f"Your name is: {contact1.getName()}")
+print(f"Your number is: {contact1.getNum()}")
+
 
 def contactBookApp():
     while True:
@@ -42,11 +58,4 @@ def contactBookApp():
 contactBookApp()
 
 
-'''Phone_number = int(input("Please Enter your num:"))
-Name = input("Please Enter your name:")
-print(contact1.getName())
-print(contact1.getNum())
-contact1.setName(Name)
-contact1.setNum(Phone_number)
-print(f"Your name is: {contact1.getName()}")
-print(f"Your number is: {contact1.getNum()}")'''
+''''''
