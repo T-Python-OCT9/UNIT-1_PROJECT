@@ -16,27 +16,18 @@
 #### Overview : An online store that sells fruits to customers. This online store has 2 main users. The customer and the manager of the store . Each one of them should be able to do the following tasks for the store to function properly . 
 
 #### As a User I should be able to do the following :
-- Browse  Products.
-- View the product info (summary, specs, price, quantity , etc.)
-- Search for Products.
-- Get recommendations for my next purchase based on my purchase history.
-- Add Products to the shopping cart .
-- Remove a product from the shopping cart.
-- List the products in my shopping cart. 
-- Continue to checkout . 
-- Fill in my address for delivery.
-- Get receipt of my purchases.
-- Check delivery status . 
-
+- Adding new Contact.
+- View the contact info (Name, Phone number)
+- Search for Contact.
+- View the Contact Book
 
 
 #### Usage :
  Explain to the user how to use your project . 
  for example:
- - type in search product_name to search for a product.
- - type in list_products to show all the products in the grocery.
- - type in show product_name to get information about this product.
- - type in buy product_name to buy the product . 
+ - type in search Contact_name to search for a contact.
+ - type in print_contact to show all the contacts.
+ - type in print contact_name to get information about this contact.
  - and so on...
 
 
