@@ -1,16 +1,16 @@
-num = int(input("Enter how many contact do you want to add:"))
-contact_name = []
-contact_num = []
 
+contact_num = []
+contact_name = []
 def adding_contact():
+    num = int(input("Enter how many contact do you want to add:"))
     for i in range(1, num + 1):
         name = input("\nEnter the contact name:")
         check_name_staut(name)
         phone_number = int(input("Enter the contact phone number starts with 966:"))
         check_phone_num_status(phone_number)
         print("The Contact has been added successufully!")
-    print(f"The contact name is: {contact_name}")
-    print(f"The contact number is: {contact_num}")
+        print(f"The contact name is: {contact_name}")
+        print(f"The contact number is: {contact_num}")
 
 
 def check_name_staut(user_name):
@@ -24,5 +24,3 @@ def check_phone_num_status(user_number : int):
         contact_num.append(user_number)
     else:
         raise ValueError("The contact phone number must be a intger and 12")
-    
-adding_contact()
