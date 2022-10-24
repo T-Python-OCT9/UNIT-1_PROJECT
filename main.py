@@ -28,6 +28,7 @@ while True:
             print("-------View Coffee List-------")
             User1.View_Coffee_list()
             print("-------------------------------\n")
+            #User1.View_Cart_Item()
         elif Selection == 2:
             print()
             print("-----------Add Item-----------")
