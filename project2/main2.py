@@ -23,7 +23,7 @@ seat_rows = []
 for i in range(rows):
     seats = []
     for j in range(columns):
-        seats.append('S')
+        seats.append('#')
     seat_rows.append(seats)
 
 
