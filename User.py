@@ -11,7 +11,7 @@ class User:
 
     def View_Coffee_list(self):
         for num , item in enumerate(Coffee_List):
-            print(num+1 , ". " , item)
+            print(num+1 , ". " , item ,"  ", Prices[num+1],"$" )
 
     def Add_Item(self):
         New_Item = input("Enter name of item: ")
