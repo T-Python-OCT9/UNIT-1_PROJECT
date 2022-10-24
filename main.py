@@ -15,11 +15,13 @@ class Courese_Website():
         print(field_List)
         field_chose = input("What the field you want? please choose and entre from the list : " )
         Register(field_chose)
-    
+        break
+        
 
   elif user_Question == 'c':
         add_Courses(user_Question)
-        
+        break
+
 
   elif user_Question == 'Exit':
    print("Thank you :)")
@@ -27,4 +29,4 @@ class Courese_Website():
 
   elif ValueError :
      print("please enter Correct vlaue !!!  \n")
-  break
+     break
