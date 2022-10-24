@@ -54,7 +54,7 @@ def available_Courses(Student):
         print(f"{index} - {note}")
     
   elif student_input =='r':
-   student_Registration(Student)
+   return student_Registration(Student)
    break
 
   elif student_input =='Exit':
