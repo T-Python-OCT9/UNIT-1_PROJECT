@@ -1,4 +1,5 @@
 from operator import index
+from unicodedata import name
 
 
 class Contact:
@@ -66,3 +67,4 @@ class Contact:
 
 contact_name = []
 contact_num = []
+welcome_phrase = lambda object : print(f"Welcome {object.name} to my app")

@@ -10,9 +10,10 @@ print(contact1.getNum())
 
 
 
+
 contact1.setName(Name)
 contact1.setNum(Phone_number)
-
+print(welcome_phrase(contact1))
 print(f"Your name is: {contact1.getName()}")
 print(f"Your number is: {contact1.getNum()}")
 
@@ -58,4 +59,3 @@ def contactBookApp():
 contactBookApp()
 
 
-''''''
