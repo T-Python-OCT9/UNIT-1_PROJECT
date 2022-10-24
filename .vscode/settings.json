@@ -1,4 +1,5 @@
 {
     "workbench.preferredDarkColorTheme": "Default Dark+",
-    "workbench.preferredLightColorTheme": "Visual Studio Dark"
+    "workbench.preferredLightColorTheme": "Visual Studio Dark",
+    "editor.fontSize": 20
 }

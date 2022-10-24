@@ -31,7 +31,6 @@ def consult_menu():
                     break
         
                 if user_input=='1':                   
-                    
                     print(" ")                
                     i=0
                     for x in services:
@@ -41,14 +40,16 @@ def consult_menu():
                     y= 'C:\\Users\\wijda\\Documents\\python-camp\\UNIT-1_PROJECT\\consultations\\'
                     word=services[choice]
                     print(word)
-                    file_lis=search_in_dir(y,word)
-                    answer=''
-                    for ser in file_lis:
-                        f = open(file_lis[ser], "a", encoding="utf-8")
-                        print(f.read())
-                        answer=f.readlines()+input("please write your answer:\n")
-                        f.write(answer)
-                        f.close()
+                    search_in_dir(y,word)
+                    os.chdir('C:/Users/wijda/Documents/python-camp/UNIT-1_PROJECT/consultations/')
+                    fi=input("enter file name:")
+                    print(fi)
+                    answer=input("please write your answer:\n")
+                    f= open(fi , "r+", encoding="utf-8")
+                    rea=f.readlines()
+                    answer1=f"{rea} \n {answer} status: complete"
+                    f.write(answer1)
+                    f.close()
                     
 
                 elif user_input=='2':
@@ -169,7 +170,7 @@ def new_cons():
             os.chdir('C:/Users/wijda/Documents/python-camp/UNIT-1_PROJECT/consultations/')
         #print("Current working directorttty: {0}".format(os.getcwd()))
             file = open(f"{nam_in} {type} .txt", "a", encoding="utf-8")
-            file.write(f"--\t{nam_in}\t{age_in}\t{phone_num_in}\t{address_in}\t{email_in}\n \t{consulation}{type} \n\t\tstatus:waiting for answer\n")
+            file.write(f"--\t{nam_in}\t{age_in}\t{phone_num_in}\t{address_in}\t{email_in}\n \t{consulation} {type} \n\t\tstatus:waiting for answer\n")
             file.close()
             file = open(f"{nam_in} {type} .txt", "r", encoding="utf-8")
             content = file.read()

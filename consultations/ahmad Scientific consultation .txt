@@ -1,0 +1,5 @@
+--	ahmad	23	0111111111	riyadh 12345	ahmad@email.com
+ 	what is DNA Scientific consultation 
+		status:waiting for answer
+['--\tahmad\t23\t0111111111\triyadh 12345\tahmad@email.com\n', ' \twhat is DNA Scientific consultation \n', '\t\tstatus:waiting for answer\n'] 
+ the answer status: complete
