@@ -1,5 +1,6 @@
 from contact import *
 contact1 = Contact("Mohammed", 966123456789)
+
 def contactBookApp():
     while True:
         start_proj = input("Do you want to enter the app? write <y> for yes or <n> for no:")
@@ -39,6 +40,13 @@ def contactBookApp():
             continue
 
 contactBookApp()
-contact1.getName()
-contact1.setName("Ahmed")
-contact1.getName()
+
+
+'''Phone_number = int(input("Please Enter your num:"))
+Name = input("Please Enter your name:")
+print(contact1.getName())
+print(contact1.getNum())
+contact1.setName(Name)
+contact1.setNum(Phone_number)
+print(f"Your name is: {contact1.getName()}")
+print(f"Your number is: {contact1.getNum()}")'''

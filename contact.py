@@ -6,12 +6,23 @@ class Contact:
         self.phone_num = phone_num
         self.name = name
 
-    def setName(self, name : str):
-        if not (isinstance(name, str)):
+    def setName(self):
+        Name = input("Please Enter your name:")
+        if not (isinstance(Name, str)):
             raise ValueError("Name is must be a string!")
         else:
-            self.name = name
+            self.name = Name
     
+    def setNum(self):
+        Phone_number = int(input("Please Enter your num:"))
+        if not (isinstance(Phone_number, int) and len(str(Phone_number))) == 12:
+            raise ValueError("Number is must be intger and 12 digits!")
+        else:
+            self.Phone_num = Phone_number
+    
+    def getNum(self):
+        return self.phone_num
+
     def getName(self):
         return self.name
 
@@ -40,7 +51,7 @@ class Contact:
         print(f"Name \t\t\t Number")
         for i in contact_name:
             x = contact_name.index(i)
-            print(f"{i}\t\t{contact_num[x]}")
+            print("{}\t\t\t{}".format(i,contact_num[x]))
 
     def searchingContact(self):
         search_contact = input("\nEnter the contact name: ")
