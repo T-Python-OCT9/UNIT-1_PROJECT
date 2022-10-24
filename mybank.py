@@ -1,5 +1,5 @@
 import datetime as dt
-class Bank:
+class BankUser:
 
     def __init__(self, name, password, id):
         self.__name = name
@@ -76,7 +76,15 @@ class Bank:
                     print('This Number is Not Avialable In Your Account')
     
     def get_date():
-        return f'Date: {dt.datetime.today()}'
+        date = dt.datetime.today()
+        day = date.day
+        day_str = date.strftime("%A")
+        month_str = date.strftime("%B")
+        return f'Date: {day_str}, {day} {month_str}'
+
+        
+
+
 
 
     
