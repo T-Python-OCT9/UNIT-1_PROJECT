@@ -6,4 +6,20 @@ test You have these  Items in your cart
   ['brownies', 'brownies', 'brownies']
  test You have these  Items in your cart  
   ['brownies', 'brownies', 'brownies', 'Black_Coffee_S']
+ test You have these  Items in your cart  
+  ['Hot_Chocolate_M', 'Egg Sandwich', 'Egg Sandwich', 'Cookie', 'Cookie', 'brownies', 'brownies', 'brownies']
+ test You have these  Items in your cart  
+  ['Hot_Chocolate_M', 'Egg Sandwich', 'Egg Sandwich', 'brownies', 'brownies', 'brownies']
+ test You have these  Items in your cart  
+  ['Hot_Chocolate_M', 'Egg Sandwich', 'brownies', 'brownies', 'brownies', 'Black_Coffee_S']
+ test You have these  Items in your cart  
+  {'Hot_Chocolate_M': 18, 'Egg Sandwich': 12, 'Black_Coffee_S': 7}
+ test You have these  Items in your cart  
+  {'Hot_Chocolate_M': 18, 'Egg Sandwich': 12}
+ test You have these  Items in your cart  
+  ['coppuccino_S', 'Hallomi Sandwich', 'cheesecake', 'Macchiato_S']
+ test You have these  Items in your cart  
+  ['Hot_Chocolate_S', 'Hallomi Sandwich', 'brownies', 'brownies', 'Black_Coffee_S']
+ test You have these  Items in your cart  
+  {'Hot_Chocolate_S': 16, 'Hallomi Sandwich': 12, 'Black_Coffee_S': 7}
  

@@ -1,2 +1,0 @@
-the customer llll has ordered these items    Chicken Sandwich   12   Cookie   6 
- 

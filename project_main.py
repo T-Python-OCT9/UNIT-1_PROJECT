@@ -1,5 +1,6 @@
 from coffee_funcs import *
 from Items import * 
+from datetime import date
 #Greeting
 
 Customer = str(input("Hi , Please type your name : "))
@@ -10,7 +11,7 @@ def menu(x:str) -> list :
   input("press anything to start")
   print(f" Welcome {x} Can I take your order?")
   print("please check the menu and let us know your orders")
-  menu1 = {"Black_Coffee_M" : 10 , "Black_Coffee_S": 7, "Flat white_M" :15 , "Flat white_S" :12, "Espresso_M" :10 , "Espresso_S" :8 , "Macchiato_M" :18 , "Macchiato_S":15, "coppuccino_M":18 , "coppuccino_S":15, "Hot_Chocolate_M":18 , "Hot_Chocolate_S" :16, "Latte_M":16 ,"Latte_S" :14, "Chicken Sandwich":12 , "Nutella Sandwich" : 11,"Egg Sandwich" : 12, "cheesecake" : 25 , "Cookie" : 6, "brownies" :8 } 
+  menu1 = {"Black_Coffee_M" : 10 , "Black_Coffee_S": 7, "Flat white_M" :15 , "Flat white_S" :12, "Espresso_M" :10 , "Espresso_S" :8 , "Macchiato_M" :18 , "Macchiato_S":15, "coppuccino_M":18 , "coppuccino_S":15, "Hot_Chocolate_M":18 , "Hot_Chocolate_S" :16, "Latte_M":16 ,"Latte_S" :14, "Chicken Sandwich":12 , "Nutella Sandwich" : 11,"Hallomi Sandwich" : 12, "cheesecake" : 25 , "Cookie" : 6, "brownies" :8 } 
   items = []
   q=[]
   done = False
@@ -109,8 +110,8 @@ def menu(x:str) -> list :
             Q=int(input("How many items you want ? : "))
             i=0 
             for i in range(i , Q) :
-                items.append("Egg Sandwich")
-            print("the Egg Sandwich has been added to your cart , Do you need anythings else ? :")
+                items.append("Hallomi Sandwich")
+            print("the Hallomi Sandwich has been added to your cart , Do you need anythings else ? :")
        
         
     elif choice == "K" or choice == "k":
@@ -141,13 +142,13 @@ def menu(x:str) -> list :
             print("the brownies has been added to your cart , Do you need anythings else ? :")
         #checkOut
     elif choice == "Q" or choice == "q" :
-        recommendation = input("Do you want to see the recommendations? press y for yes or n for no")
+        recommendation = input("Do you want to see the recommendations? press y for yes or n for no :")
         if recommendation == "y" or recommendation == "Y" : 
           recommender(items)
         else :
          print("Let us proceed to checkout!")
          
-       
+               
         #invoice(items)
         print_invoice(items ,Customer)
         menu(Customer)
@@ -188,6 +189,7 @@ def menu(x:str) -> list :
         input("press any thin for Back t menu")  
     else:
         print("Invalid Choice")
+        raise ("this is a raised exception")
 
 
 cart= menu(Customer)

@@ -1,10 +1,12 @@
     
 # this function will print the invoice  
+from logging import exception
 from turtle import done
+from datetime import date
 
 
 def print_invoice(x :list ,y:str):
-    menu_1 = {"Black_Coffee_M" : 10 , "Black_Coffee_S": 7, "Flat white_M" :15 , "Flat white_S" :12, "Espresso_M" :10 , "Espresso_S" :8 , "Macchiato_M" :18 , "Macchiato_S":15, "coppuccino_M":18 , "coppuccino_S":15, "Hot_Chocolate_M":18 , "Hot_Chocolate_S" :16, "Latte_M":16 ,"Latte_S" :14, "Chicken Sandwich":12 , "Nutella Sandwich" : 11,"Egg Sandwich" : 12, "cheesecake" : 25 , "Cookie" : 6, "brownies" :8 } 
+    menu_1 = {"Black_Coffee_M" : 10 , "Black_Coffee_S": 7, "Flat white_M" :15 , "Flat white_S" :12, "Espresso_M" :10 , "Espresso_S" :8 , "Macchiato_M" :18 , "Macchiato_S":15, "coppuccino_M":18 , "coppuccino_S":15, "Hot_Chocolate_M":18 , "Hot_Chocolate_S" :16, "Latte_M":16 ,"Latte_S" :14, "Chicken Sandwich":12 , "Nutella Sandwich" : 11,"Hallomi Sandwich" : 12, "cheesecake" : 25 , "Cookie" : 6, "brownies" :8 } 
     print(" Your invoice")
     print("  Item :                Price :")
     order = {}
@@ -55,6 +57,9 @@ def print_invoice(x :list ,y:str):
             print(f"this item : {delete_item} has been deleted")
             print("Please check your order after changes ")
             print_invoice(order,y)
+            #if  delete_item not in order: 
+             # raise exception ("this item not in cart")
+            
           elif answer == "d" or answer == "D":
             checkout(order, y)
             done = True  
@@ -76,7 +81,9 @@ def recommender(items:list):
 def checkout(x:dict ,y :str) -> str :
     print("the order has been completed")
     file = open('orders.csv', "a+", encoding="utf-8")
-    file.write(f"the customer {y} has ordered these items  {x}\n ")
+    file.write(f"the customer {y} has ordered these items  {x}\n  ")
+    today = date.today()
+    file.write(f"the date of order :   {today}\n  ")
     file.close()
     Done :str = "The order has been completed"
     return Done

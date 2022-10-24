@@ -1,9 +1,0 @@
-ssss You have these  Items in your cart  
-  ['Espresso_S']
- ssss You have these  Items in your cart  
-  ['brownies', 'brownies']
- ssss You have these  Items in your cart  
-  ['brownies', 'brownies', 'brownies']
- ssss You have these  Items in your cart  
-  []
- 

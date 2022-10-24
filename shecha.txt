@@ -1,3 +1,0 @@
-shecha You have these  Items in your cart  
-  ['Hot_Chocolate_M', 'cheesecake', 'cheesecake', 'cheesecake', 'cheesecake', 'Chicken Sandwich', 'Chicken Sandwich', 'Chicken Sandwich', 'Chicken Sandwich']
- 

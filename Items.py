@@ -17,7 +17,7 @@ class items:
        
 
 
-Black_Coffee= items("black coffee","aaaaaaa", 9, "120")
+Black_Coffee= items("black coffee","Black coffee is a beverage made from roasted coffee beans. The beans are ground and soaked in water, which releases their flavor, color, caffeine content, and nutrients. Although coffee is often served hot, it can also be served iced.", 7, "5")
 Mocha=items("Mocha","aaaaaaa",10, "120", )
 cappuccino=items("cappuccino" ,"aaaaaaa", 14, "220")
 espresso=items("espresso","aaaaaaa", 12,"10")

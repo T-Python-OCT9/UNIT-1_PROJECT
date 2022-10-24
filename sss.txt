@@ -1,3 +1,0 @@
-sss You have these  Items in your cart  
-  ['brownies', 'brownies', 'brownies']
- 
