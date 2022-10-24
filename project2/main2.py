@@ -59,7 +59,7 @@ def booking_ticket():
         return price
     elif seat_rows[rows - 1][columns - 1] == 'X':
 
-        print("Seat already booked  please enter another seat")
+        print(" please enter another the seat already booked ")
         booking_ticket()
     else:
         return
@@ -87,10 +87,10 @@ def income():
 
 def info(rows, columns):
     user_info = booking_dict[(rows, columns)]
-    print("\nName:" + user_info.Name)
-    print("Age:" + user_info.Age)
-    print("Ticket price:" + str(user_info.Price))
-    print("Phone no:" + str(user_info.Phone))
+    print("\nname:" + user_info.Name)
+    print("age:" + user_info.Age)
+    print("price:" + str(user_info.Price))
+    print("Phone :" + str(user_info.Phone))
 
 
 n = 0
@@ -111,8 +111,7 @@ while n != 5:
 
     elif n == 3:
         print("\nNumber of booked tickets:" + str(number_of_tickets))
-       # print("\nCurrent Income: $" + str(current_income))
-        #print("\nTotal Income: $" + str((rows * columns) * 10))
+
     elif n == 4:
         rows = int(input("Enter row: "))
         columns = int(input("Enter column: "))
