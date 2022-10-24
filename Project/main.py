@@ -213,19 +213,22 @@ def  Time_Red_Movie() -> int :
     
 
         tickets = int(input("how many tickets do u need: "))
-        print ("where do u want to sit")
-        seats1 ={
-        "1": "front",
-        "2": "Middel",
-        "3": "Back",
-        "4": "Left side",
-        "5": "right side"
-        }
-        print(seats1)
-        seats =  input("Choose ur seats:")
-        Seats2 = seats1[seats]
+        if tickets == 0 :
+            raise ValueError('should be more then zero')
+        else:
+            print ("where do u want to sit")
+            seats1 ={
+            "1": "front",
+            "2": "Middel",
+            "3": "Back",
+            "4": "Left side",
+            "5": "right side"
+            }
+            print(seats1)
+            seats =  input("Choose ur seats:")
+            Seats2 = seats1[seats]
         
-        print (f"enjoy The Movie at {x} {tickets}- Tickets  {Seats2} Seats")
+            print (f"enjoy The Movie at {x} {tickets}- Tickets  {Seats2} Seats")
 
 def  Time_LOTR_Movie() -> int :
         time1 = {
@@ -241,19 +244,22 @@ def  Time_LOTR_Movie() -> int :
         
 
         tickets = int(input("how many tickets do u need: "))
-        print ("where do u want to sit")
-        seats1 ={
-        "1": "front",
-        "2": "Middel",
-        "3": "Back",
-        "4": "Left side",
-        "5": "right side"
-        }
-        print(seats1)
-        seats =  input("Choose ur seats:")
-        Seats2 = seats1[seats]
+        if tickets == 0 :
+            raise ValueError('should be more then zero')
+        else:
+            print ("where do u want to sit")
+            seats1 ={
+            "1": "front",
+            "2": "Middel",
+            "3": "Back",
+            "4": "Left side",
+            "5": "right side"
+            }
+            print(seats1)
+            seats =  input("Choose ur seats:")
+            Seats2 = seats1[seats]
         
-        print (f"enjoy The Movie at {x} {tickets}- Tickets  {Seats2} Seats")
+            print (f"enjoy The Movie at {x} {tickets}- Tickets  {Seats2} Seats")
 def  Time_Harrypotter_Movie() -> int :
         time1 = {
         "1": "10.00-1.00",
@@ -267,18 +273,21 @@ def  Time_Harrypotter_Movie() -> int :
         x = time1[t]
         
         tickets = int(input("how many tickets do u need: "))
-        print ("where do u want to sit")
-        seats1 ={
-        "1": "front",
-        "2": "Middel",
-        "3": "Back",
-        "4": "Left side",
-        "5": "right side"
-        }
-        print(seats1)
-        seats =  input("Choose ur seats :")
-        Seats2 = seats1[seats]
+        if tickets == 0 :
+            raise ValueError('should be more then zero')
+        else:
+            print ("where do u want to sit")
+            seats1 ={
+            "1": "front",
+            "2": "Middel",
+            "3": "Back",
+            "4": "Left side",
+            "5": "right side"
+            }
+            print(seats1)
+            seats =  input("Choose ur seats:")
+            Seats2 = seats1[seats]
         
-        print (f"enjoy The Movie at {x} {tickets}- Tickets  {Seats2} Seats")
+            print (f"enjoy The Movie at {x} {tickets}- Tickets  {Seats2} Seats")
         
 city()
