@@ -70,17 +70,29 @@ for d in dates :
     print(f"date : {d} ")
 
 print("  ")
-
+'''
 while True :
    dt = datetime(year = 2022 , 
    month = int(input('Enter a month: ')) , day = int(input('Enter a day: ')))
    if dt in dates:
-    print ("This date is reserved, try again ..")
-    continue
+       print ("This date is reserved, try again ..")
+       continue
    elif dt not in dates:
-    print ("Your appointment has been booked")  
-    dates.append(dt)
-    break
+        print ("Your appointment has been booked")  
+        dates.append(dt)
+        break
+'''
+while True :
+    #dt = datetime(year = 2022 , day = int(input('Enter a day: ')) , month = int(input('Enter a month: ')) )
+    daystr = "2022-"+input('Enter a month: ')+"-"+input('Enter a day: ')
+    #print(daystr)
+    if daystr in dates:
+        print ("This date is reserved, try again ..")
+        continue
+    else:
+            print ("Your appointment has been booked")  
+            dates.append(dt)
+            break
 
 print("  ")
 
@@ -92,7 +104,7 @@ print("  ")
 
 
 
-bill1 = Bill(thePatient.idd  , thePatient.name ,  thePatient.gender, thePatient.age , dt , theDR)
+bill1 = Bill(thePatient.idd  , thePatient.name ,  thePatient.gender, thePatient.age , daystr , theDR)
 print(" --------- THE BILL -------- ")
 print(bill1.printBill())
 
