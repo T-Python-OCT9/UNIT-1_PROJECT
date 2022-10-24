@@ -23,6 +23,7 @@ def signin():
     user1.set_name(input('Please Enter Your Name: '))
     user1.set_password(input('Please Enter Your Password: '))
     user1.set_id(input('Please Enter Your Password: '))
+    user1.set_balance(0)
     print('---Thank You---')
     main()
 
@@ -35,7 +36,7 @@ def user():
             print(f'Your New Balance Is: {user1.get_balance()}\n{BankUser.get_date()}')
         elif option == '2':
             user1.withdraw(int(input('Please Enter The Number: ')))
-            print(f'Your New Balance Is: {user1.get_balance()}\n{BankUser.get_date()}')
+            print(f'Your Balance Is: {user1.get_balance()}\n{BankUser.get_date()}')
         elif option == '3':
             print(f'Your Balance Is: {user1.get_balance()}\n{BankUser.get_date()}')
         elif option == '4':
@@ -91,28 +92,3 @@ def main():
 
 
 main()
-
-                
-
-
-        
-    
-            
-
-        
-
-
-    
-        
-
-    
-
-
-
-
-  
-    
- 
-
-
-

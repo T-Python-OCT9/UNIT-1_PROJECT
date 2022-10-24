@@ -62,7 +62,6 @@ class BankUser:
         else:
             self.__balance = self.__balance + value
             
-
     def withdraw(self, value):
         if self.__stats == 'close':
             print('Your Account is Close Try Later !!')
