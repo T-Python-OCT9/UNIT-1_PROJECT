@@ -5,10 +5,10 @@ from addCourses import add_Courses
 field_List =["Finance & accounting" , "IT" ,"Business" , "Design"]
 
 class Courese_Website():
- 
+ print("... Welcome to courses Website ...")
+ user_Question = input("Are you Student or Compny? please entre 's' if you student and 'c' if you company :")
  while True:
-  print("... Welcome to courses Website ...")
-  user_Question = input("Are you Student or Compny? please entre 's' if you student and 'c' if you company :")
+  
   print("-"*10)
 
   if user_Question == 's':
@@ -27,7 +27,4 @@ class Courese_Website():
 
   elif ValueError :
      print("please enter Correct vlaue !!!  \n")
-     break
-
   break
-  
