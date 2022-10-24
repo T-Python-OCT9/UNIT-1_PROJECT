@@ -13,10 +13,11 @@ class User:
         for num , item in enumerate(Coffee_List):
             print(num+1 , ". " , item ,"  ", Prices[num+1],"$" )
     
-    
+
     def View_Cart_Item(self):
         for Item  in Cart_Item:
             print(Cart_Item[Item]," ",Item)
+        print("-------------------------------\n")
         
 
     def Add_Item(self):
@@ -40,7 +41,7 @@ class User:
                 break
             else:
                 print("Your enter not valid..")
-        print()
+        print("-------------------------------\n")
 
 
     def Remove_Item(self):

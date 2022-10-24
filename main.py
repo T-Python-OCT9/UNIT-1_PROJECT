@@ -41,11 +41,15 @@ while True:
             User1.Remove_Item()
         elif Selection == 4:
             print()
+            print("--------View Cart Item--------")
+            User1.View_Cart_Item()
+        elif Selection == 5:
+            print()
             print("------------Receipt------------")
             User1.Receipt()
-        elif Selection == 5:
-            User1.Clear_List()
         elif Selection == 6:
+            User1.Clear_List()
+        elif Selection == 7:
             print("\nHope to see you back soon!\n")
             break
         else:
