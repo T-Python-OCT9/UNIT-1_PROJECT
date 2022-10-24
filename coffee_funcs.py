@@ -23,7 +23,10 @@ def print_invoice(x :list ,y:str):
 
     total = sum(order.values()) 
     total2= count1 + count2
-     
+    offer = lambda a : a* 5 / 100
+    dis_1 = offer(total2)
+    final =total2 - dis_1
+       
             #print(f"- {(i)} ***** : {(menu_1[i])} RS")
             #print (order)
     file = open(f'{y}.txt', "a+", encoding="utf-8")
@@ -31,11 +34,13 @@ def print_invoice(x :list ,y:str):
     file.write(f" {x}\n ")
     file.close()
     
-    print(f"The total amount is : {total2} RS")  
+    print(f"The total amount befor dis is : {total2} RS")
+    print(f" the total disc is {dis_1}") 
+    print (f"the total amount after dis is {final}")  
     answer = input("Please press C to checkout or E for edit your order  :")
             # we need to add quantity?
     if answer == "c" or answer == "C" :
-        checkout(order,y)
+      checkout(order,y)
         #open file to save the order      
     elif answer == "e" or answer == "E":
         answer = input("Do want add or remove items ? : please type A to change the order , R for remove some items or D to complete your order  : ")
@@ -53,6 +58,19 @@ def print_invoice(x :list ,y:str):
           elif answer == "d" or answer == "D":
             checkout(order, y)
             done = True  
+
+def recommender(items:list):
+  if "cheesecake" in items:
+      recom=input("Do you want to add a Macchiato ? : ")
+      if recom == "y" or recom == "Y" :
+        items.append("Macchiato_S")
+      else : return
+  elif "brownies" in items:
+      recom=input("Do you want to add a Black_Coffee ? : ")
+      if recom == "y" or recom == "Y" :
+        items.append("Black_Coffee_S")
+      else : return
+
 
 # This fun to complete the order and log it in customer file 
 def checkout(x:dict ,y :str) -> str :

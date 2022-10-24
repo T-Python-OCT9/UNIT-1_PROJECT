@@ -1,0 +1,7 @@
+suhaim You have these  Items in your cart  
+  ['Egg Sandwich', 'Egg Sandwich', 'Egg Sandwich', 'Egg Sandwich', 'Cookie', 'Cookie']
+ suhaim You have these  Items in your cart  
+  ['Espresso_S']
+ suhaim You have these  Items in your cart  
+  ['Espresso_S']
+ 

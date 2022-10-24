@@ -1,0 +1,9 @@
+test You have these  Items in your cart  
+  ['brownies', 'brownies', 'brownies', 'Chicken Sandwich', 'Chicken Sandwich', 'Chicken Sandwich', 'Chicken Sandwich']
+ test You have these  Items in your cart  
+  ['brownies', 'brownies', 'brownies']
+ test You have these  Items in your cart  
+  ['brownies', 'brownies', 'brownies']
+ test You have these  Items in your cart  
+  ['brownies', 'brownies', 'brownies', 'Black_Coffee_S']
+ 

@@ -1,0 +1,3 @@
+llll You have these  Items in your cart  
+  ['Chicken Sandwich', 'Chicken Sandwich', 'Chicken Sandwich', 'Cookie', 'Cookie', 'Cookie', 'Cookie']
+ 

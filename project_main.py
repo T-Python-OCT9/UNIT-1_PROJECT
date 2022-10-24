@@ -90,7 +90,7 @@ def menu(x:str) -> list :
         print("Sandwich Menu")
         print("C - Chicken Sandwich")
         print("N - Nutella Sandwich")
-        print("E - Egg Sandwich")
+        print("E - Hallomi Sandwich")
         print("Q - Quit")
         item = input("choose your order: ")
         if item == "C" or item == "c":
@@ -141,8 +141,12 @@ def menu(x:str) -> list :
             print("the brownies has been added to your cart , Do you need anythings else ? :")
         #checkOut
     elif choice == "Q" or choice == "q" :
-        
-        print("Let us proceed to checkout!")
+        recommendation = input("Do you want to see the recommendations? press y for yes or n for no")
+        if recommendation == "y" or recommendation == "Y" : 
+          recommender(items)
+        else :
+         print("Let us proceed to checkout!")
+         
        
         #invoice(items)
         print_invoice(items ,Customer)

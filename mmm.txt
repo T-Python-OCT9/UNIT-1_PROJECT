@@ -1,0 +1,3 @@
+mmm You have these  Items in your cart  
+  ['Latte_M', 'Chicken Sandwich', 'Chicken Sandwich', 'Chicken Sandwich']
+ 
