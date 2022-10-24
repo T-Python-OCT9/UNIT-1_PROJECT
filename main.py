@@ -82,6 +82,7 @@ while True :
         dates.append(dt)
         break
 '''
+
 while True :
     #dt = datetime(year = 2022 , day = int(input('Enter a day: ')) , month = int(input('Enter a month: ')) )
     daystr = "2022-"+input('Enter a month: ')+"-"+input('Enter a day: ')
@@ -91,7 +92,7 @@ while True :
         continue
     else:
             print ("Your appointment has been booked")  
-            dates.append(dt)
+            dates.append(daystr)
             break
 
 print("  ")
