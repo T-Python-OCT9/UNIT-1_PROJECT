@@ -8,7 +8,7 @@ def homeView() -> None:
     result = 'home'
     while result == 'home':
         result = commandLine(
-            'Welcome to HR System\n\n \tType one of these commands:\n\t (M) - Login as manager.\n\t (E) - Login as employee.\n\t (EXIT) - Exit the system.')
+            '# Welcome to HR System\n\t----------------------\n\n \tType one of these commands:\n\t (M)    - Manager Login.\n\t (E)    - Employee Login.\n\t (EXIT) - Exit the system.')
         if result == 'm':
             managerView(result)
         elif result == 'e':

@@ -19,21 +19,24 @@
 
 - Show employees list (Names, Roles, Evaluates.. etc)
 - Chanage employee profile.
+- Add new employee.
+- Edit employee profile.
 - Evaluate an emplyee.
+- Employees Complaints.
 
 #### As employee able to:
 
-- Show salaries.
-- Promotion.
 - Evaluation.
-- Resignation.
+- Information.
+- Change Password.
+- Complaints.
 
 #### Usage:
 
-The CLI explained commands to the user.
+The CLI commands are explained to the user.
 for example:
 
-- (M) Login as manager.
-- (E) Login as employee.
-- (LOGOUT) Logout.
+- (M) - Login as manager.
+- (E) - Login as employee.
+- (EXIT) - Exit the system.
 - More explained in the System.

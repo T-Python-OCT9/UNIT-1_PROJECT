@@ -17,8 +17,8 @@ def loginEmployee(employees_list: list):
 
 
 def loginManager(manager_user: str, manager_password: str):
-    username = input(' Username: ')
-    password = getpass(prompt=' Password: ')
+    username = input(' > Username: ')
+    password = getpass(prompt=' > Password: ')
     if (username == manager_user and password == manager_password):
         login = True
     else:
