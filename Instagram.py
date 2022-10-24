@@ -1,25 +1,20 @@
 class Instagram:
     def __init__(self, userName : str ): 
-        self.userName=userName
-        #List Instagram:
+        self.userName=userName       
         self.Posts = ["Python_Post","Lab_Post","Unit_Post","Python12_Post"]
 
-        #Command List:
+        #Comment List:التعليقات
         self.Comment = ["Post","Post","Post"]
-
-        #Likes List:---------------
+        #Likes List:-التفضيلات
         self.Likes = []
-
         #MyPost List:--------------
         self.Mypost = []
-
         #MyComment List:-----------
         self.Mycomment = []
-     #_____________________________
+    #_____________________________
     def TimeLine(self):
         for post in self.Posts:
             print(post)
-
     #______________________________
     def addPost(self):
         _addPost = input("Add Your Post: ")
@@ -49,7 +44,7 @@ class Instagram:
         for post in self.Posts:
             print(post)
 
-     #_________________________________________________________________
+    #_________________________________________________________________
    
     def ListComment(self):
         for post in self.Comment:
@@ -58,35 +53,48 @@ class Instagram:
 
     def startInstagram(self):
          #User1 =Instagram("Najd")
-        print("         WELCOME To Instagram      ")
-        #print("   Choose what you want   ")
+        print("********************************** ")
+        print("         WELCOME TO INSTAGRAM      ")
+        print("                                    ")
+        print("*********************************** ")
+        print("                                    ")
+        print("   Choose What You Want   ")
+        print("                                    ")
+        print("*********************************** ")
         UserOptions = ""
-        print(" Lets choose a number from the list  ")
         ##############################################
         #Using while loop
         while UserOptions != "e" :
-            print("     1) To Add Post\n"+
-                    "     2) To Like Post from Posts\n"+
-                    "     3) To Add Comment\n"
-                    "     4) To List all my liked posts\n"
-                    "     5) To List all my comment\n"
-                    "     6) To List all my posts\n"
-                    "     7) To View Time Line Posts \n")
-
+            print("     a) To Add Post\n"+"     b) To Like Post from Posts\n"+"     c) To Add Comment\n""     d) To List all my liked posts\n" "     f) To List all my comment\n"
+                    "     g) To List all my posts\n" "     k) To View Time Line Posts \n")
+        ##UserOptions ################   
             UserOptions=input("What Would You Like To Do? press the number to choose or 'e' to exit ")  
-            if UserOptions == '1' :
+            if UserOptions == 'a' :
                 self.addPost()
-            elif UserOptions == '2' :
+            elif UserOptions == 'b' :
                 self.Liked()
-            elif UserOptions == '3' :
+            elif UserOptions == 'c' :
                 self.addComment()
-            elif UserOptions == '4' :
+            elif UserOptions == 'd' :
                 self.ListLikes()
-            elif UserOptions == '5' :
+            elif UserOptions == 'f' :
                 self.ListComment()
-            elif UserOptions == '6' :
+            elif UserOptions == 'g' :
                 self.MyPost()
-            elif UserOptions == '7' :
+            elif UserOptions == 'k' :
                 self.TimeLine()
         else:
           print("Thank you for using the Instagram program, Come back again soon")
+          ###########################
+def Start():
+    User =Instagram("Najd")
+    try:
+        User.startInstagram()
+    except ValueError as err:
+        print(err)
+        #To Rerun the program
+        Start()
+    except IndexError as err1:
+        print(err1)
+        Start()
+Start()
