@@ -9,8 +9,6 @@ while True:
     UserName = input("Please enter your name: ")
     print(f"Welcom {UserName.upper()} to our coffee up shop ...\n")
     User1 = User()
-
-    
     
     while True:
         print("Coffee Up List:")
@@ -51,7 +49,7 @@ while True:
             break
         else:
             print("Enter the valid number.")
-        
+    User1.Clear_List()    
     More_User = input("Do you have anther user yes or no? ")
     if More_User.lower() == "yes":
         pass
