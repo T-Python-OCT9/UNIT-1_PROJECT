@@ -1,5 +1,6 @@
 #Random app 
 from InfoClass import *
+from random import *
 
 #a function that welcome the uesr
 def user_suggestions():
@@ -7,7 +8,6 @@ def user_suggestions():
    print("...."*3)
    #Categories sets start...
    categories = {"Action.","Kids.","Docuseries.","Drama.","Crimes.","Comedies."}
-   '''any_show={}'''
 
    action ={"The Batman","Demon Salyer","Memory","Jurassic World Dominion","Spider-Man: No Way Home","Doctor Strange in the Multiverse of Madness","Ambulance","Hunter X Hunter"}
 
@@ -20,6 +20,11 @@ def user_suggestions():
    docuseries = {"Our Planet","Pandemic","The Great Hack","How To Chanage Your Mind","Mystery Lab"}
 
    kids = {"Cocomelon","Kung Fo Panda","Boss Baby","Dragon Legends","Badanamu Pop","Sponge Bob"}
+
+   '''any_show = {"Spider-Man: No Way Home","The Office","How to get away with Murder","A Beautiful Mind","Hunter X Hunter"}'''
+
+   '''random_items= random.choice(any_show)'''
+
 
    #Categories sets end...
 
@@ -97,7 +102,7 @@ def user_suggestions():
    elif user_show_info == "parasite":
       print(parasite.ShowsInfo())
 
-   elif user_show_info == "grave of the fireflies ":
+   elif user_show_info == "grave of the fireflies":
       print(grave_of_the_fireflies .ShowsInfo())                 
    #drama shows info end...
    #comedies shows info start...
@@ -163,10 +168,10 @@ def user_suggestions():
    elif user_show_info == "boss baby":
       print(boss_baby.ShowsInfo())
 
-   elif user_show_info == "dragon_legends":
+   elif user_show_info == "dragon legends":
       print(dragon_legends.ShowsInfo())   
 
-   elif user_show_info == "badanamu pop ":
+   elif user_show_info == "badanamu pop":
       print(Badanamu_Pop.ShowsInfo())
       
    elif user_show_info == "sponge bob":
@@ -199,10 +204,13 @@ def add_fav_list():
 #Menu list for the program...
 def menu_list()->str:
    '''This function will show a list and the user will type the number in the list to navigate through it '''
-
+   
    print("...."*3)
    print("Hello there!, what is your mood to watch today?\n")
-   Menu_items=("Browse the categories and ,get recommendations and summary for the show based on their type shows.\n ","Add and list your favorite shows.","Random options")
+   Menu_items=("Browse the categories and ,get recommendations and summary for the show based on their type shows.\n ","Add and list your favorite shows.\n",)
+   
+   '''"Random options\n"'''
+   
    for index,Menu_items in enumerate(Menu_items):
        print('{}.{}'.format(index+1,Menu_items)) 
    print("\n")    
@@ -210,14 +218,17 @@ def menu_list()->str:
    user_num_chosen=input("Please type the the number of list to navigate in the program: \n")
    
    #if statement to navigate through the program
-   if user_num_chosen == '1':
-      print(user_suggestions())
-   elif user_num_chosen == '2':
-      print(add_fav_list())
+   try:
+      if user_num_chosen =='1':
+         print(user_suggestions())
+      elif user_num_chosen =='2':
+         print(add_fav_list())
+      '''elif user_num_chosen =='3':
+         print(random.choice(any_show)) '''
+
+      return menu_list 
+   except:
+     print("An error occurred,please type only numbers to naviagte ")   
       
-   return menu_list   
  
 print(menu_list())
-'''try:
-   except:
-     print("An error occurred,please try to write the var correctly")'''
