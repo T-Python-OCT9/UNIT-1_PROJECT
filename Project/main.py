@@ -1,12 +1,8 @@
 
-from cinmea import *
-
-user1 = User ("Moath@hotmail.com","12345678")
-
-User.login()
-
+#from cinmea import *
+#This function to choose the city 
 def city()  -> int:
-    while True :
+    
         print("Hi welcome to movie ticket booking: ")
         print("witch City do u live in :")
         print("1,Riyadh ")
@@ -19,12 +15,12 @@ def city()  -> int:
             Jeddah_Malls()
         elif place == 3:
             Dammam_Malls()
-            break 
+            
         else:
             print("wrong choice!!")
 
 def Riyadh_Malls () -> int:
-    while True :
+    
         print ("1.riyadh Park","2.riyadh Front","3.boulevard Riyadh" )
         print ()
         r = int (input("Choose the cinema u want to attend:"))
@@ -34,12 +30,12 @@ def Riyadh_Malls () -> int:
             Riyadh_Front()
         elif r == 3 :
             Boulevard_Riyadh()
-            break
+            
         else:
             print("wrong choice!!")
 
 def Riyadh_Park () -> int  :
-    while True :
+    
         print ("what movie u want to watch")
         print ("1.Red","2.Lord of the Rings","3.Harry potter")
         s = int(input("choose from you'r options: "))
@@ -49,12 +45,12 @@ def Riyadh_Park () -> int  :
             Time_LOTR_Movie()
         elif s == 3:
             Time_Harrypotter_Movie()
-            break
+            
         else :
               print ("wrong choice!!")
 
 def Riyadh_Front () -> int  :
-    while True :
+
         print ("what movie u want to watch")
         print ("1.Red","2.Lord of the Rings","3.Harry potter")
         q = int(input("choose from you'r options: "))
@@ -64,12 +60,12 @@ def Riyadh_Front () -> int  :
             Time_LOTR_Movie()
         elif q == 3:
             Time_Harrypotter_Movie()
-            break
+            
         else :
               print ("wrong choice")
 
 def Boulevard_Riyadh () -> int  :
-    while True :
+    
         print ("what movie u want to watch")
         print ("1.Red","2.Lord of the Rings","3.Harry potter")
         d = int(input("choose from you'r options: "))
@@ -79,12 +75,12 @@ def Boulevard_Riyadh () -> int  :
             Time_LOTR_Movie()
         elif d == 3:
             Time_Harrypotter_Movie()
-            break
+            
         else :
               print ("wrong choice")  
 
 def Jeddah_Malls () -> int:
-    while True :
+    
         print ("1.Redsea","2.Arabia Mall","3.Aziz Mall" )
         print ()
         f = int (input("Choose the cinema u want to attend:"))
@@ -94,12 +90,12 @@ def Jeddah_Malls () -> int:
             Arabia_Mall()
         elif f == 3 :
             Aziz_Mall()
-            break
+            
         else:
             print("wrong choice!!")
 
 def RedSea () -> int  :
-    while True :
+    
         print ("what movie u want to watch")
         print ("1.Red","2.Lord of the Rings","3.Harry potter")
         g = int(input("choose from you'r options: "))
@@ -109,12 +105,12 @@ def RedSea () -> int  :
             Time_LOTR_Movie()
         elif g == 3:
             Time_Harrypotter_Movie()
-            break
+            
         else :
               print ("wrong choice!!")
 
 def Arabia_Mall () -> int  :
-    while True :
+    
         print ("what movie u want to watch")
         print ("1.Red","2.Lord of the Rings","3.Harry potter")
         h = int(input("choose from you'r options: "))
@@ -124,12 +120,12 @@ def Arabia_Mall () -> int  :
             Time_LOTR_Movie()
         elif h == 3:
             Time_Harrypotter_Movie()
-            break
+            
         else :
               print ("wrong choice")
 
 def Aziz_Mall () -> int  :
-    while True :
+    
         print ("what movie u want to watch")
         print ("1.Red","2.Lord of the Rings","3.Harry potter")
         j = int(input("choose from you'r options: "))
@@ -139,12 +135,12 @@ def Aziz_Mall () -> int  :
             Time_LOTR_Movie()
         elif j == 3:
             Time_Harrypotter_Movie()
-            break
+            
         else :
               print ("wrong choice!!")                                  
 
 def Dammam_Malls   () -> int:
-    while True :
+    
         print ("1.West Avenue","2.Dahran Mall","3.Nakhell Mall" )
         print ()
         k = int (input("Choose the cinema u want to attend:"))
@@ -154,12 +150,12 @@ def Dammam_Malls   () -> int:
             Dahran_Mall()
         elif k == 3 :
             Nakhell_Mall()
-            break
+            
         else:
             print("wrong choice!!")
 
 def West_Avenue () -> int  :
-    while True :
+    
         print ("what movie u want to watch")
         print ("1.Red","2.Lord of the Rings","3.Harry potter")
         L = int(input("choose from you'r options: "))
@@ -169,12 +165,12 @@ def West_Avenue () -> int  :
             Time_LOTR_Movie()
         elif L == 3:
             Time_Harrypotter_Movie()
-            break
+            
         else :
               print ("wrong choice")
 
 def Dahran_Mall () -> int  :
-    while True :
+    
         print ("what movie u want to watch")
         print ("1.Red","2.Lord of the Rings","3.Harry potter")
         z = int(input("choose from you'r options: "))
@@ -184,12 +180,12 @@ def Dahran_Mall () -> int  :
             Time_LOTR_Movie()
         elif z == 3:
             Time_Harrypotter_Movie()
-            break
+            
         else :
               print ("wrong choice")
 
 def Nakhell_Mall () -> int  :
-    while True :
+    
         print ("what movie u want to watch")
         print ("1.Red","2.Lord of the Rings","3.Harry potter")
         c = int(input("choose from you'r options: "))
@@ -199,7 +195,7 @@ def Nakhell_Mall () -> int  :
             Time_LOTR_Movie()
         elif c == 3:
             Time_Harrypotter_Movie()
-            break
+            
         else :
               print ("wrong choice")
 
@@ -214,7 +210,7 @@ def  Time_Red_Movie() -> int :
         print(time1)
         t = input("select your time:")
         x = time1[t]
-        print ("enjoy The Movie at "+x)
+    
 
         tickets = int(input("how many tickets do u need: "))
         print ("where do u want to sit")
@@ -242,7 +238,7 @@ def  Time_LOTR_Movie() -> int :
         print(time1)
         t = input("select your time:")
         x = time1[t]
-        print ("enjoy The Movie at "+x)
+        
 
         tickets = int(input("how many tickets do u need: "))
         print ("where do u want to sit")
@@ -285,3 +281,4 @@ def  Time_Harrypotter_Movie() -> int :
         
         print (f"enjoy The Movie at {x} {tickets}- Tickets  {Seats2} Seats")
         
+city()
