@@ -1,0 +1,8 @@
+Select a number for the action that you would like to do:
+
+1. View coffee list
+2. Add item to cart list
+3. Remove item from cart list
+4. Receipt
+5. Clear coffee list
+6. Exit
