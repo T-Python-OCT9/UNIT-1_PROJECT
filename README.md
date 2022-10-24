@@ -11,9 +11,9 @@
 - Use some form of Error Handling .
 - Organize Your Code into modules & (or packages)
 
-## Project Name :  An app to suggest something to watch (Random!) :
+## Project Name :  An app to suggest something to watch :
 
-#### Overview: An app suggests something to watch by taking from the user what kind of a series and movies enjoy to watch, and the app will show what the perfect match for their type is since it's hard to decide what you want to watch sometimes. There are two primary users the admin and the end-user. 
+#### Overview: A program that suggests something to watch by taking from the user what kind of a series and movies enjoy to watch, and the program will show what the perfect match for their type is since it's hard to decide what you want to watch sometimes. There are two primary users the admin and the end-user. 
 
 #### As a end-user I should be able to do the following :
 - Browse the categories. 

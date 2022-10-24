@@ -5,7 +5,9 @@ from random import *
 #a function that welcome the uesr
 def user_suggestions():
    ''' this function will greet the user and show a list of suggestions to choose the kind of the shows they enjoy and it will show some random suggestion based on their taste on shows'''
+
    print("...."*3)
+
    #Categories sets start...
    categories = {"Action.","Kids.","Docuseries.","Drama.","Crimes.","Comedies."}
 
@@ -21,9 +23,6 @@ def user_suggestions():
 
    kids = {"Cocomelon","Kung Fo Panda","Boss Baby","Dragon Legends","Badanamu Pop","Sponge Bob"}
 
-   '''any_show = {"Spider-Man: No Way Home","The Office","How to get away with Murder","A Beautiful Mind","Hunter X Hunter"}'''
-
-   '''random_items= random.choice(any_show)'''
 
 
    #Categories sets end...
@@ -204,11 +203,12 @@ def add_fav_list():
 #Menu list for the program...
 def menu_list()->str:
    '''This function will show a list and the user will type the number in the list to navigate through it '''
-   
+   print("\n")
    print("...."*3)
+   print("\n")
    print("Hello there!, what is your mood to watch today?\n")
    Menu_items=("Browse the categories and ,get recommendations and summary for the show based on their type shows.\n ","Add and list your favorite shows.\n",)
-   
+
    '''"Random options\n"'''
    
    for index,Menu_items in enumerate(Menu_items):
@@ -219,13 +219,10 @@ def menu_list()->str:
    
    #if statement to navigate through the program
    try:
-      if user_num_chosen =='1':
+      if user_num_chosen == '1':
          print(user_suggestions())
-      elif user_num_chosen =='2':
+      elif user_num_chosen == '2':
          print(add_fav_list())
-      '''elif user_num_chosen =='3':
-         print(random.choice(any_show)) '''
-
       return menu_list 
    except:
      print("An error occurred,please type only numbers to naviagte ")   

@@ -11,15 +11,11 @@ class Shows:
         return f"Here is the summary for the show {self.name},{self.summary} and it has a {self.NumberOfEpisodes}" 
 
 #the action categories start...
-try:
-    the_batman = Shows("The Batman: \n","The mayor of Gotham is murdered on Halloween night by a masked assailant who calls himself The Riddler (Paul Dano). The Gotham City Police Department investigate the murder, and Lieutenant James Gordon (Jeffrey Wright) and Batman find a message addressed to “The Batman.”","Movie 2h 56min")
-except:
-     print("An error occurred,please try to write the var correctly")
-try:
-    demon_salyer = Shows("Demon Salyer : \n","Tanjiro Kamado, our protagonist, is a youth whose family is brutally murdered by a demon. Although badly injured, his sister, Nezuko, is the sole survivor of the attack. Tanjiro rushes to town in a desperate attempt to find medical assistance for her. Along the way, she wakes and suddenly attacks him. As Nezuko attempts to kill him, an incredible swordsman appears.","26 ep")
-except:
-     print("An error occurred,please try to write the var correctly")
-     
+
+the_batman = Shows("The Batman: \n","The mayor of Gotham is murdered on Halloween night by a masked assailant who calls himself The Riddler (Paul Dano). The Gotham City Police Department investigate the murder, and Lieutenant James Gordon (Jeffrey Wright) and Batman find a message addressed to “The Batman.”","Movie 2h 56min")
+
+demon_salyer = Shows("Demon Salyer : \n","Tanjiro Kamado, our protagonist, is a youth whose family is brutally murdered by a demon. Although badly injured, his sister, Nezuko, is the sole survivor of the attack. Tanjiro rushes to town in a desperate attempt to find medical assistance for her. Along the way, she wakes and suddenly attacks him. As Nezuko attempts to kill him, an incredible swordsman appears.","26 ep")
+
 hunter_hunter = Shows("Hunter X Hunter: \n","Hunter X Hunter revolves around Gon Freecss whose goal in life is to find his father Ging, a renowned hunter. In order to find his father, Gon must become a hunter himself and sets out to do so.","148 ep")
 
 Ambulance = Shows("Ambulance: \n","Ambulance' Plot Summary Distinguished US army veteran Will Sharp lives a life of financial struggle as he is turned away by every medical insurance company for experimental surgery to treat his wife's cancer. The couple also have a very young son, and Will promises his wife to stay out of trouble and look for an honest job.","80min")
