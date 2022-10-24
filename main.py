@@ -9,7 +9,7 @@ s=student('ghadah', '11','060999')
 
 customer_service1 = custserv ()
 
-c=courses('ali','ppp',200)
+c=courses('ali','wordepress',200)
 
 def user_servces():
     while True:
@@ -22,6 +22,7 @@ def user_servces():
          + "\n"+"please type 3: If you want to complain or suggest your opinion "
            + "\n"+"please type 4: if you want to rigster in any course  " 
           + "\n"+"please type 5: if you want to view a course price ")
+        print()
 
         if user_answare == '1':
 
@@ -64,4 +65,4 @@ def user_servces():
 
 user_servces()
      
-         
+#https://www.dropbox.com/s/e6vxmp7jy66e5fq/project%20demo.mp4?dl=0 this is a project demo
