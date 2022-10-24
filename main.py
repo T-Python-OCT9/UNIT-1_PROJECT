@@ -1,20 +1,21 @@
 #import classes
-import CoffeeType as coffee
-import Classes
+import CoffeeMethod as coffee
+import Buy
 
 
 #main class
 #explain programming for user
 print("_"*50)
-print("\nHi, this is coffee machine, we have past coffee her\nTo order you must chose to start\"*\"\nTo chose your coffee enter number of coffee\nTo complete your order enter \"y \"\nTo chang your order enter \"h\"\nTo cansel your order enter \"n\"\nNow we will list the menue:\n")
+print("\nHi, this is a coffee machine\nWe have some coffee here\n")
 
 #Dictionary for coffee menue
-coffeeDictionary={"coffee1":15,
-    "coffee2":13 ,
-    "coffee3":12,
-    "coffee4":14,
-    "coffee5":16,
-    "coffee6":15}
+print("\t\tMenu")
+coffeeDictionary={"Cappuccino":16,
+    "Latte\t":16,
+    "Espresso":10,
+    "Americano":11,
+    "Coffee Mocha":16,
+    "Hotchocolate":15}
 #list coffee menue
 item_coffee=coffeeDictionary.items()
 coffee.coffee_menu(item_coffee)
@@ -24,96 +25,100 @@ coffee.coffee_menu(item_coffee)
 tax_calculation=lambda price_lambda:price_lambda+(price_lambda*0.15)
 
 #To start program
-start=input("\nIf you want drink coffee enter \"*\"\n")
+start=input("\nPress \"*\" to start order your coffee:\n")
 
 #start loop
 while(start=="*"):
     print("-"*50)
     #to choice from menu
-    print("\nTo choice coffee1 enter \"1\"\nTo choice coffee2 enter \"2\"\nTo choice coffee3 enter \"3\"\nTo choice coffee4 enter \"4\"\nTo choice coffee5 enter \"5\"\nTo choice coffee6 enter \"6\"")
-    choice=input("Choice coffee you want plese:")
+    print("\nFor Cappuccino press \'1\'\nFor Latte press \'2\'\nFor Espresso Press \'3\'\nFor Americano press \'4\'\nFor Coffee Mocha press \'5\'\nFor Hotchocolate press \'6\'")
+    choice=input("\nChoose coffee you want please:\n")
     #Take value from user and test if have error of not
     try:
         price=coffee.coffeePrice(choice)
         coffee_name=coffee.coffeeName(choice)
-        print(f"price is : {price}")
+        print(f"The price is : {price} SR")
     except ValueError as error:
         print(error)
         break
     print("-"*50)
     #Ask user to complete buy or cancel or change 
-    complete_order=input("if you want to complete your order enter \"y\",if you want to cancel your order enter\"n\", if you want to change your order enter \"h\":\n")
+    complete_order=input("\nDo you want to complete your order ?\n\nPress \"Y\" to continue \nPress \"N\" to cancel\nPress \"H\" to change:\n")
     #To complete order
     if complete_order=="y"or complete_order=="Y":
         print("-"*50)
         #Ask user to choice to buy
-        print("How do you want to \'?\'\n*Note, If you buy from card you will have discount 20%")
-        buy=input("enter \"1\" to chose card or \"2\" to cash: \n")
+        print("\nChoose how to pay: \n** If you pay from card you will have '20%' discount ")
+        buy=input("Press \'1\' for card or \'2\' for cash: \n")
         #If user choice buy from card
         if buy=="1":
             #to calculator price
-            card_buy=Classes.Card(price)
+            card_buy=Buy.Card(price)
             discount_price=card_buy.printInfo()
             print("-"*50)
             #print order and calculator price after discount and calculator tax
-            print(f"Your order is {coffee_name} and the price after discount is {discount_price}, The price after calculator tax is {tax_calculation(discount_price)}")
+            print(f"\nYour order is {coffee_name}\nThe price after discount : {discount_price}SR\nThe price after add the tax : {tax_calculation(discount_price)}SR\n")
             #Ask to enter card and buy
-            complete_with_card= input("Choose c to , if you want to cancel enter n, if you want to change enter h:\n")
+            complete_with_card= input("Choose \"C\" to pass your credit card on the screan \nChoose \"N\" to cancel")
             #to enter card and buy
             if complete_with_card=="c" or complete_with_card=="C":
-                #end do coffee
-                print(f"your coffee {coffee_name} is ready, take it pleas ")
-                #Ask user if want another order
-                start=input("do you want order another coffee ? if you want enter \"*\" if you do not enter no")
                 print("-"*50)
+                #end do coffee
+                print(f"\nYour coffee {coffee_name} is ready, take it please ")
+                print(f"\nEnjoy with your coffee\n") 
+                #Ask user if want another order
+                start=input("\nDo you want order another coffee ? \n\nTo order another coffee press \"*\" \nTo exit press N \n")
             #To cancel order
             elif complete_with_card=="n" or complete_with_card=="N":
+                print("-"*50)   
+                print(f"\nThank you for use coffee machine\n\n")   
                 break
-            #To change order
-            elif complete_with_card=="*" :
-                pass
             #If user put incorrect value
             else:
                 print("-"*50)
-                print("you enter incorrect value, sory you will go back to star")
+                print("\nYou enter incorrect value, make a new order\n")
         #If user choice buy cash      
         elif buy=="2":
             print("-"*50)
             #Print information of order
-            print(f"Your order is {coffee_name}, the price after calculator tax is {tax_calculation(price)}")
+            print(f"\nYour order is {coffee_name}\nThe price: {price} SR\nAfter add the tax {tax_calculation(price)} SR")
             #Ask user to enter his mony
-            user_m=input("enter your mony plese: \n")
+            user_m=input("Enter your money: \n")
             #Take value from user and test if have error of not
             try:
-                cash_buy=Classes.Cash(price,float(user_m))
-                mouny_p:float=cash_buy.printInfo()
+                cash_buy=Buy.Cash(price,float(user_m))
+                money_p:float=cash_buy.printInfo()
             except TypeError as error:
                 print(error)
                 break
             #Information discount price 
-            print(f"The mony after discount price is {mouny_p}\nTake \'?\'")
+            ronund_price=round(money_p,2)
+            print(f"\nTotal amount {tax_calculation(price)} SR\nRemmaining: {ronund_price} SR\nTake the change please")
             ##end do coffee
-            print(f"your coffee {coffee_name} is ready, take it pleas ")
+            print(f"\nYour coffee {coffee_name} is ready, take it please ")  
+            print(f"\nEnjoy with your coffee\n")   
             #Ask user if want another order
-            start=input("do you want order another coffee ? if you want enter \"*\" if you do not enter no")
-            print("-"*50)
+            start=input("Do you want order another coffee ? \n\nTo order press \"*\" \nTo exit press N \n")
         #if user enter another choice or incorrect value
         else:
             print("-"*50)
-            print("you enter incorrect value, sory you will go back to star")
+            print("\nYou enter incorrect value, make a new order\n")
     #To change order      
     elif complete_order=="h" or complete_order=="H" :
         pass
     #To cancel order
     elif complete_order=="n" or complete_order=="N":
+        print("-"*50)   
+        print(f"\nThank you for use coffee machine\n\n")   
         break
     #If user enter incorrect choice 
     else:
         print("-"*50)
-        print("you enter incorrect value, sory you will go back to star")
-        
+        print("\nYou enter incorrect value, make a new order\n")
+#end loop 
+print("-"*50) 
+print(f"\nEnd Programming\n")
 
-print("Thank you for use coffee machine")
 
 
 
