@@ -229,25 +229,29 @@ def home():
             print("thank you for visiting ..see you soon -_^")
             break
         elif user_input=='9':
-            print("\t 1 Add new consultent\n")
-            print("\t 2 show all consultants\n")
-            print("\t 0 exit")
-            val=input("\n->")
-            if val=='1':
-                save_reg()
-            elif val=='2':
-                file = open("consultants.txt", "r", encoding="utf-8")
-                content = file.read()
-                print(content)
-                file.close()
-            elif val=='0':
-                print("thank you for visiting ..see you soon -_^")
-                break
+            password=input("please enter admin's password\n")
+            while password=='1234':
+                print("\t 1 Add new consultent\n")
+                print("\t 2 show all consultants\n")
+                print("\t 0 exit")
+                val=input("\n->")
+                if val=='1':
+                    save_reg()
+                elif val=='2':
+                    file = open("consultants.txt", "r", encoding="utf-8")
+                    content = file.read()
+                    print(content)
+                    file.close()
+                elif val=='0':
+                    print("thank you for visiting ..see you soon -_^")
+                    break
+            else:
+                print("wrong password\n")
         elif user_input=='8':
             print("")
             consult_menu()
         else:
             print("please inter valid input")
 home()
-print(id_fielld)
+
 
