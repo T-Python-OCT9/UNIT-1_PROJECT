@@ -152,7 +152,7 @@ def managerView(result: str) -> str:
                                     the_state: str = complaint[0]
                                     state_decorator = ((8 - len(complaint[0])) * ' ')
                                     the_complaint: str = complaint[1]
-                                    print(f'\t{the_number}   {employee.name}{name_decorator}{the_state}{state_decorator}{the_complaint[:15]}...\n')
+                                    print(f'\t{the_number}   {employee.name}{name_decorator}{the_state}{state_decorator}{the_complaint[:20]}...')
                         complaints_command = input('\n\tType (BACK) to return to manager window\n > ')
                         if complaints_command == 'back':
                             complaints_view = 'back'
