@@ -2,7 +2,7 @@
 #from cinmea import *
 #This function to choose the city 
 def city()  -> int:
-    
+    while True :
         print("Hi welcome to movie ticket booking: ")
         print("witch City do u live in :")
         print("1,Riyadh ")
@@ -15,7 +15,7 @@ def city()  -> int:
             Jeddah_Malls()
         elif place == 3:
             Dammam_Malls()
-            
+            break 
         else:
             print("wrong choice!!")
 
