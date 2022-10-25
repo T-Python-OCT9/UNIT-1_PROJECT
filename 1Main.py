@@ -1,37 +1,39 @@
+from Class import *
 
-from Class import Employee
+m1 = Employee("ahmad","15000","yes","8")
+m2 = Employee("mohamad","13000","yes","6")
 
 print ("*************************************************")
 print ("Welcome to the Retirees Wages Calculation Section")
 print ("*************************************************")
+n=input ("Do you want to view registered employees? ")
+if n == "yes":
+    m1.setName("Ahmed")
+    print(m1.getName())
 
-def first():
-    n=input ("Do you want to view registered employees? ")
-    n = str(n)
-    if n == "yes":
+    m1.setSalary("15000")
+    print(m1.getSalary())
 
-        m1 = Employee("ahmad","15000","yes","8")
-        m2 = Employee("mohamad","13000","yes","6")
+    m1.setofficer("yes")
+    print(m1.getofficere())
 
-        m1.name()
-        m1.officer()
-        m1.Salary()
-        m1.years_of_service()
+    m1.setyears_of_service("8")
+    print(m1.getyears_of_service())
 
-        m2.name()
-        m2.officer()
-        m2.Salary()
-        m2.years_of_service()
-        
-    print ("*************************************************")
+    m2.setName("mohamd")
+    print(m2.getName())
 
-    print("Name : ",m1.name,"officer : ",m1.officer,"Salary : ",m1.Salary,"years_of_service"
-,m1.years_of_service)
+    m2.setSalary("13000")
+    print(m2.getSalary())
 
-    print("Name : ",m1.name,"officer : ",m1.officer,"Salary : ",m1.Salary,"years_of_service"
-,m1.years_of_service)
+    m2.setofficer("yes")
+    print(m2.getofficere())
 
-first()      
+    m2.setyears_of_service("6")
+    print(m2.getyears_of_service())
+
+      
+print ("*************************************************")
 
 m= input("Do you want to calculate the dues of a new employee? ")
 print ("*************************************************")
