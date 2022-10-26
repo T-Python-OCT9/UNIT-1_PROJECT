@@ -6,7 +6,6 @@ from User import *
 list_food ={"Burger": 50, "Pizza": 60, "Frizz": 10, "Soft drink": 15},
 
 
-#print(f"{nestle_most_sold_product} {nestle_most_sold_product_figure} US Dollars")
 def payment():
     pay=input("cash or card : ")
     if pay == "cash":
